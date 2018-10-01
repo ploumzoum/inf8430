@@ -6,12 +6,14 @@ import java.io.*;
 import ca.polymtl.inf8480.tp1.shared.*;
 
 public class FakeServer {
+	private final String clientPath = "src/ca/polymtl/inf8480/tp1/client";
+
 	int execute(int a, int b) {
 		return a + b;
 	}
 
 	boolean create(String name) throws IOException {
-		File file = new File("./FileSystem/" + name + ".txt");
+		File file = new File( clientPath + "/FileSystemServer/" + name + ".txt");
 		FileModel fileModel = new FileModel(name);
 		List<FileModel> fileList = new ArrayList<FileModel>();
 		boolean isInFile = true;
@@ -35,7 +37,7 @@ public class FakeServer {
 		List<FileModel> fileList = new ArrayList<FileModel>();
 		try
 		{
-			FileInputStream fileIn = new FileInputStream("./Save/fs.ser");
+			FileInputStream fileIn = new FileInputStream(clientPath + "/Save/fs.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
 			try
 			{
@@ -59,7 +61,7 @@ public class FakeServer {
 	{
 		try
 		{
-			FileOutputStream fileOut = new FileOutputStream("./Save/fs.ser");
+			FileOutputStream fileOut = new FileOutputStream(clientPath + "/Save/fs.ser");
 			ObjectOutputStream out = new ObjectOutputStream(fileOut);
 			out.writeObject(list);
 			out.close();

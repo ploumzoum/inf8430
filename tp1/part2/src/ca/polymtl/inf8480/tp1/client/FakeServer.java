@@ -14,29 +14,37 @@ public class FakeServer {
 		File file = new File("./FileSystem/" + name + ".txt");
 		FileModel fileModel = new FileModel(name);
 		List<FileModel> fileList = new ArrayList<FileModel>();
-
+		boolean isInFile = true;
 		// Fetch file list
 		try
 		{
 			FileInputStream fileIn = new FileInputStream("./Save/fs.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
-			fileList = (List<FileModel>) in;
+			try
+			{
+				fileList = (List<FileModel>) in.readObject();
+			}
+			catch (ClassNotFoundException e)
+			{
+				System.err.println("Erreur: " + e.getMessage());
+			}
 			in.close();
 			fileIn.close();
-
-			fileList.add(fileModel);
-
-			// Save new file list
-			FileOutputStream fileOut = new FileOutputStream("./Save/fs.ser");
-			ObjectOutputStream out = new ObjectOutputStream(fileOut);
-			out.writeObject(fileList);
-			out.close();
-			fileOut.close();
 		}
 		catch (IOException e)
 		{
 			System.err.println("Erreur: " + e.getMessage());
 		}
+
+
+		fileList.add(fileModel);
+		// Save new file list
+		FileOutputStream fileOut = new FileOutputStream("./Save/fs.ser");
+		ObjectOutputStream out = new ObjectOutputStream(fileOut);
+		out.writeObject(fileList);
+		out.close();
+		fileOut.close();
+
 		
 		return file.createNewFile();
 	}
@@ -48,7 +56,14 @@ public class FakeServer {
 		{
 			FileInputStream fileIn = new FileInputStream("./Save/fs.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
-			fileList = (List<FileModel>) in;
+			try
+			{
+				fileList = (List<FileModel>) in.readObject();
+			}
+			catch (ClassNotFoundException e)
+			{
+				System.err.println("Erreur: " + e.getMessage());
+			}
 			in.close();
 			fileIn.close();
 		}

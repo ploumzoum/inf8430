@@ -4,7 +4,7 @@ import java.io.*;
 
 public class FileModel implements Serializable
 {
-    private static final long serialVersionUID = 345547316;
+    private static final long serialVersionUID = 345547315;
     public String _fileName;
     public String _lastChecksum;
     public boolean _locked;

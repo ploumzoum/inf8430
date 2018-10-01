@@ -1,7 +1,7 @@
+
 package ca.polymtl.inf8480.tp1.server;
 
 import java.rmi.ConnectException;
-import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
@@ -19,6 +19,8 @@ public class Server implements ServerInterface {
 	public Server() {
 		super();
 	}
+
+	private AuthenticationService authenticationService = new AuthenticationService();
 
 	private void run() {
 		if (System.getSecurityManager() == null) {
@@ -47,13 +49,18 @@ public class Server implements ServerInterface {
 	 * paramètre.
 	 */
 	@Override
-	public int execute(int a, int b) throws RemoteException {
+	public int execute(int a, int b) {
 		return a + b;
 	}
 
 	@Override
-	public boolean create(String name) throws RemoteException, IOException {
+	public boolean create(String name) throws IOException {
 		File file = new File("./FileSystem/" + name + ".txt");
 		return file.createNewFile();
+	}
+
+	@Override
+	public void register(String username, String password) {
+        authenticationService.register(username, password);
 	}
 }

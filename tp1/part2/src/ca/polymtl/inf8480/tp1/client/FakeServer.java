@@ -72,4 +72,9 @@ public class FakeServer {
 			System.err.println("Erreur: " + e.getMessage());
 		}
 	}
+
+	void syncLocaDirectory()
+	{
+
+	}
 }

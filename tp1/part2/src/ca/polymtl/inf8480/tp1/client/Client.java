@@ -12,6 +12,7 @@ import java.util.List;
 import ca.polymtl.inf8480.tp1.shared.*;
 
 public class Client {
+	private final String clientPath = "src/ca/polymtl/inf8480/tp1/client";
 	public static void main(String[] args) {
 		String distantHostname = null;
 
@@ -118,6 +119,22 @@ public class Client {
 				for (FileModel file : list) {
 					System.out.println(file._fileName);
 				}
+			break;
+
+			case "syncLocalDirectory":
+				List<FileModel> serverList = localServer.list();
+				for (FileModel file : serverList) {
+					File newFile = new File( clientPath + "/FileSystemClient/" + file._fileName + ".txt");
+					try
+					{
+						newFile.createNewFile();
+					}
+					catch (IOException e)
+					{
+						System.err.println("Erreur: " + e.getMessage());
+					}
+				}
+				System.out.println("Synchronization completed.");
 			break;
 			default: 
 		

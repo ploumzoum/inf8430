@@ -5,6 +5,8 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.io.IOException;
+import java.util.Scanner;
 
 import ca.polymtl.inf8480.tp1.shared.ServerInterface;
 
@@ -41,14 +43,17 @@ public class Client {
 	}
 
 	private void run() {
-		appelNormal();
+		while(true)
+		{
+			appelNormal();
 
-		if (localServerStub != null) {
-			appelRMILocal();
-		}
+			if (localServerStub != null) {
+				appelRMILocal();
+			}
 
-		if (distantServerStub != null) {
-			appelRMIDistant();
+			if (distantServerStub != null) {
+				appelRMIDistant();
+			}
 		}
 	}
 
@@ -73,11 +78,44 @@ public class Client {
 	private void appelNormal() {
 		long start = System.nanoTime();
 		int result = localServer.execute(4, 7);
-		long end = System.nanoTime();
+		Scanner reader = new Scanner(System.in);
+		System.out.print("client$ ");
+		String input = reader.nextLine();
 
-		System.out.println("Temps écoulé appel normal: " + (end - start)
-				+ " ns");
-		System.out.println("Résultat appel normal: " + result);
+		String[] parsed = input.split("\\s");
+		String cmd = parsed[0];
+		String argument1 = parsed[1];
+		boolean result2 = false;
+
+		switch (cmd)
+		{
+			case "create":
+				if(argument1 != null)
+				{
+					try
+					{
+						result2 = localServer.create(argument1);
+					}
+					catch (IOException e)
+					{
+						System.out.println("Erreur: " + e.getMessage());
+					}
+					System.out.println("Résultat appel normal create: " + result2);
+				}
+				else
+				{
+					System.out.println("Argument non-fourni.");
+				}
+			break; 
+
+			default: 
+		
+			long end = System.nanoTime();
+
+			System.out.println("Temps écoulé appel normal: " + (end - start)
+					+ " ns");
+			System.out.println("Résultat appel normal: " + result);
+		}
 	}
 
 	private void appelRMILocal() {
@@ -85,7 +123,6 @@ public class Client {
 			long start = System.nanoTime();
 			int result = localServerStub.execute(4, 7);
 			long end = System.nanoTime();
-
 			System.out.println("Temps écoulé appel RMI local: " + (end - start)
 					+ " ns");
 			System.out.println("Résultat appel RMI local: " + result);

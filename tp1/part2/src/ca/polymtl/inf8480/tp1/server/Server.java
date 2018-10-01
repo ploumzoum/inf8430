@@ -5,6 +5,8 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.io.File;
+import java.io.IOException;
 
 import ca.polymtl.inf8480.tp1.shared.ServerInterface;
 
@@ -48,5 +50,11 @@ public class Server implements ServerInterface {
 	@Override
 	public int execute(int a, int b) throws RemoteException {
 		return a + b;
+	}
+
+	@Override
+	public boolean create(String name) throws RemoteException, IOException {
+		File file = new File("./FileSystem/" + name + ".txt");
+		return file.createNewFile();
 	}
 }

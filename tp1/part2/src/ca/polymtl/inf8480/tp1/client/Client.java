@@ -5,10 +5,11 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
+import java.util.List;
 
-import ca.polymtl.inf8480.tp1.shared.ServerInterface;
+import ca.polymtl.inf8480.tp1.shared.*;
 
 public class Client {
 	public static void main(String[] args) {
@@ -84,7 +85,11 @@ public class Client {
 
 		String[] parsed = input.split("\\s");
 		String cmd = parsed[0];
-		String argument1 = parsed[1];
+		String argument1 = "";
+		if(parsed.length == 2)
+		{
+			argument1 = parsed[1];
+		}
 		boolean result2 = false;
 
 		switch (cmd)
@@ -107,7 +112,13 @@ public class Client {
 					System.out.println("Argument non-fourni.");
 				}
 			break; 
-
+			
+			case "list":
+				List<FileModel> list  = localServer.list();
+				for (FileModel file : list) {
+					System.out.println(file._fileName);
+				}
+			break;
 			default: 
 		
 			long end = System.nanoTime();

@@ -1,6 +1,10 @@
+package ca.polymtl.inf8480.tp1.shared;
 
-public class FileModel
+import java.io.*;
+
+public class FileModel implements Serializable
 {
+    private static final long serialVersionUID = 345547316;
     public String _fileName;
     public String _lastChecksum;
     public boolean _locked;

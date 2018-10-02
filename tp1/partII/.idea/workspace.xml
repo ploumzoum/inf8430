@@ -235,7 +235,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="partii" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538450584797" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538450595565" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ResponseTime_Analyzer" />
   </component>
   <component name="RecentsManager">

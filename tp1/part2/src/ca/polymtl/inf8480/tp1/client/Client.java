@@ -13,7 +13,7 @@ import com.inf8480.shared.FileModel;
 import com.inf8480.shared.ServerInterface;
 
 public class Client {
-	private final String clientPath = "src/com/inf8480/client";
+	private final String clientPath = "src/ca/polymtl/inf8480/tp1/client";
 	public static void main(String[] args) {
 		String distantHostname = null;
 

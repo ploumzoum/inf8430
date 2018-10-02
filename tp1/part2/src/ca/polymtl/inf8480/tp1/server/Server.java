@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Server implements ServerInterface {
-	private final String serverPath = "src/com/inf8480/server";
+	private final String serverPath = "src/ca/polymtl/inf8480/tp1/server";
 
 	public static void main(String[] args) {
 //		System.setProperty("java.security.policy","`../../../../permissions.policy");

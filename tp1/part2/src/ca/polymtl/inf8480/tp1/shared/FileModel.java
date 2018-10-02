@@ -8,6 +8,7 @@ public class FileModel implements Serializable
     public String _fileName;
     public String _lastChecksum;
     public boolean _locked;
+    public String _lockUID;
 
     public FileModel(String fileName)
     {

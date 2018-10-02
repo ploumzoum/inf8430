@@ -12,5 +12,6 @@ public interface ServerInterface extends Remote {
 	List<FileModel> list() throws RemoteException;
 	byte[] get(String filename, String checksum) throws RemoteException;
 	void push(String filename, byte[] content) throws RemoteException;
+	LockAnswer lock(String filename, String checksum) throws RemoteException;
 
 }

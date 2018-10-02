@@ -3,6 +3,7 @@
 package ca.polymtl.inf8480.tp1.server;
 
 import ca.polymtl.inf8480.tp1.shared.FileModel;
+import ca.polymtl.inf8480.tp1.shared.LockAnswer;
 import ca.polymtl.inf8480.tp1.shared.ServerInterface;
 import ca.polymtl.inf8480.tp1.shared.Util;
 import ca.polymtl.inf8480.tp1.shared.AuthenticationServerInterface;
@@ -164,6 +165,48 @@ public class Server implements ServerInterface {
 		} catch(Exception e){
 			System.err.println("File download error: "+e.getMessage());
 			return(null);
+		}
+	}
+
+	@Override
+	public LockAnswer lock(String filename, String checksum)
+	{
+		try
+		{
+			List<FileModel> fileList = new ArrayList<FileModel>();
+			fileList = getFileModels(fileList, serverPath);
+			boolean locked = true;
+			String lockUID = "";
+			for (FileModel model : fileList)
+			{
+				if(model._fileName.equals(filename))
+				{
+					locked = model._locked;
+					lockUID = model._lockUID;
+				}
+			}
+			if(!locked)
+			{
+				// Lock the file
+				for (FileModel model : fileList)
+				{
+					if(model._fileName.equals(filename))
+					{
+						model._locked = true;
+						model._lockUID = ""; // TODO: Put client id here
+					}
+				}
+				return new LockAnswer(get(filename, checksum), true, "");
+			}
+			else
+			{
+				return new LockAnswer(null, false, lockUID);	
+			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			return new LockAnswer(null, false, "");
 		}
 	}
 

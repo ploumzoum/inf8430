@@ -14,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import ca.polymtl.inf8480.tp1.shared.FileModel;
+import ca.polymtl.inf8480.tp1.shared.LockAnswer;
 import ca.polymtl.inf8480.tp1.shared.ServerInterface;
 import ca.polymtl.inf8480.tp1.shared.Util;
 
@@ -174,6 +175,52 @@ public class Client {
 					System.out.println("Argument non-fourni.");
 				}
 				break;
+			case "lock":
+				if(!argument1.isEmpty())
+				{
+					String checksum = "";
+					try
+					{
+						File file = new File(clientPath + "/FileSystemClient/" + argument1 +".txt");
+						checksum = Util.getChecksum(file);
+					}
+					catch (IOException e)
+					{
+						checksum = null; 
+						e.printStackTrace();
+					}	
+					try
+					{	
+						LockAnswer lockAnswer = serverStub.lock(argument1, checksum);
+						byte[] filedata = lockAnswer._file;
+						BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(clientPath + "/FileSystemClient/" + argument1 +".txt"));
+						output.write(filedata,0,filedata.length);
+						output.flush();
+						output.close();
+						
+						if(lockAnswer._lockSuccess)
+						{
+							System.out.println("Lock successful.");
+						}
+						else
+						{
+							System.out.println("Client " + lockAnswer._UID + "has already locked the file.");
+						}
+					}
+					catch (NullPointerException e)
+					{
+						System.out.println("File already up-to-date.");
+					}
+					catch (Exception e)
+					{
+						e.printStackTrace();
+					}
+				}
+				else
+				{
+					System.out.println("Argument non-fourni.");
+				}
+			break;
 			case "push":
 				if(!argument1.isEmpty())
 				{

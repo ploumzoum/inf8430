@@ -1,9 +1,9 @@
 
 
-package com.inf8480.server;
+package ca.polymtl.inf8480.tp1.server;
 
-import com.inf8480.shared.FileModel;
-import com.inf8480.shared.ServerInterface;
+import ca.polymtl.inf8480.tp1.shared.FileModel;
+import ca.polymtl.inf8480.tp1.shared.ServerInterface;
 
 import java.rmi.ConnectException;
 import java.rmi.RemoteException;

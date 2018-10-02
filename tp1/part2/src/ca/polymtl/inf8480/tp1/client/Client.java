@@ -1,4 +1,4 @@
-package com.inf8480.client;
+package ca.polymtl.inf8480.tp1.client;
 
 import java.rmi.AccessException;
 import java.rmi.NotBoundException;
@@ -9,8 +9,8 @@ import java.io.*;
 import java.util.List;
 import java.util.Scanner;
 
-import com.inf8480.shared.FileModel;
-import com.inf8480.shared.ServerInterface;
+import ca.polymtl.inf8480.tp1.shared.FileModel;
+import ca.polymtl.inf8480.tp1.shared.ServerInterface;
 
 public class Client {
 	private final String clientPath = "src/ca/polymtl/inf8480/tp1/client";

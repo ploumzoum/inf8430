@@ -1,4 +1,4 @@
-package com.inf8480.shared;
+package ca.polymtl.inf8480.tp1.shared;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

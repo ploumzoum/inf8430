@@ -10,6 +10,7 @@ import java.rmi.server.UnicastRemoteObject;
 import java.io.*;
 
 public class Server implements ServerInterface {
+	private final String serverPath = "src/com/inf8480/server";
 
 	public static void main(String[] args) {
 //		System.setProperty("java.security.policy","`../../../../permissions.policy");
@@ -56,7 +57,7 @@ public class Server implements ServerInterface {
 
 	@Override
 	public boolean create(String name) throws IOException {
-		File file = new File("./FileSystem/" + name + ".txt");
+		File file = new File(serverPath + "/FileSystem/" + name + ".txt");
 		return file.createNewFile();
 	}
 

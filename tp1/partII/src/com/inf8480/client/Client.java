@@ -13,7 +13,7 @@ import com.inf8480.shared.FileModel;
 import com.inf8480.shared.ServerInterface;
 
 public class Client {
-	private final String clientPath = "src/ca/polymtl/inf8480/tp1/client";
+	private final String clientPath = "src/com/inf8480/client";
 	public static void main(String[] args) {
 		String distantHostname = null;
 
@@ -91,11 +91,11 @@ public class Client {
 				{
 					try
 					{
-						result2 = localServer.create(argument1);
+						result2 = localServerStub.create(argument1);
 					}
 					catch (IOException e)
 					{
-						System.out.println("Erreur: " + e.getMessage());
+						e.printStackTrace();
 					}
 					System.out.println("Résultat appel normal create: " + result2);
 				}

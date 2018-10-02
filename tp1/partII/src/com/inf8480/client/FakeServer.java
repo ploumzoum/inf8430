@@ -7,7 +7,7 @@ import java.io.*;
 import com.inf8480.shared.FileModel;
 
 public class FakeServer {
-	private final String clientPath = "src/ca/polymtl/inf8480/tp1/client";
+	private final String clientPath = "src/com/inf8480/client";
 
 	int execute(int a, int b) {
 		return a + b;
@@ -46,14 +46,14 @@ public class FakeServer {
 			}
 			catch (ClassNotFoundException e)
 			{
-				System.err.println("Erreur: " + e.getMessage());
+				e.printStackTrace();
 			}
 			in.close();
 			fileIn.close();
 		}
 		catch (IOException e)
 		{
-			System.err.println("Erreur: " + e.getMessage());
+			e.printStackTrace();
 		}
 		return fileList;
 	}

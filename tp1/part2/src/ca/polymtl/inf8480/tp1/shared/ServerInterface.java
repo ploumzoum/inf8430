@@ -10,7 +10,7 @@ public interface ServerInterface extends Remote {
 	boolean create(String name) throws RemoteException, IOException;
 	void register(String username, String password) throws RemoteException;
 	List<FileModel> list() throws RemoteException;
-	byte[] get(String filename) throws RemoteException;
+	byte[] get(String filename, String checksum) throws RemoteException;
 	void push(String filename, byte[] content) throws RemoteException;
 
 }

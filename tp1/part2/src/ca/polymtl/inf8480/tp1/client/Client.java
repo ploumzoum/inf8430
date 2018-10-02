@@ -8,9 +8,14 @@ import java.rmi.registry.Registry;
 import java.io.*;
 import java.util.List;
 import java.util.Scanner;
+import java.security.DigestInputStream;
+import java.security.MessageDigest;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import ca.polymtl.inf8480.tp1.shared.FileModel;
 import ca.polymtl.inf8480.tp1.shared.ServerInterface;
+import ca.polymtl.inf8480.tp1.shared.Util;
 
 public class Client {
 	private final String clientPath = "src/ca/polymtl/inf8480/tp1/client";
@@ -133,9 +138,11 @@ public class Client {
 				{
 					try
 					{
-						byte[] filedata = serverStub.get(argument1);
-         				File file = new File(clientPath + "/FileSystemClient/" + argument1 +"txt");
-         				BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(clientPath + "/FileSystemClient/" + argument1 +"txt"));
+						File file = new File(clientPath + "/FileSystemClient/" + argument1 +".txt");
+						String checksum = Util.getChecksum(file);
+
+						byte[] filedata = serverStub.get(argument1, checksum);
+         				BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(clientPath + "/FileSystemClient/" + argument1 +".txt"));
          				output.write(filedata,0,filedata.length);
          				output.flush();
          				output.close();
@@ -179,8 +186,4 @@ public class Client {
 
 		}
 	}
-
-
-
-
 }

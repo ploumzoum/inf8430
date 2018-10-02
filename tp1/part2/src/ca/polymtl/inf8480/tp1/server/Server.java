@@ -4,6 +4,7 @@ package ca.polymtl.inf8480.tp1.server;
 
 import ca.polymtl.inf8480.tp1.shared.FileModel;
 import ca.polymtl.inf8480.tp1.shared.ServerInterface;
+import ca.polymtl.inf8480.tp1.shared.Util;
 import ca.polymtl.inf8480.tp1.shared.AuthenticationServerInterface;
 
 import java.rmi.ConnectException;
@@ -143,9 +144,12 @@ public class Server implements ServerInterface {
 
 	// Tiré de https://www.oracle.com/technetwork/articles/javase/rmi-corba-136641.html
 	@ Override
-	public byte[] get(String fileName){
+	public byte[] get(String fileName, String clientChecksum){
 		try {
 			File file = new File(serverPath +  "/FileSystem/" +  fileName + ".txt");
+
+			String serverChecksum = Util.getChecksum(file);
+
 			byte buffer[] = new byte[(int)file.length()];
 			BufferedInputStream input = new
 					BufferedInputStream(new FileInputStream(serverPath +  "/FileSystem/" +  fileName + ".txt"));

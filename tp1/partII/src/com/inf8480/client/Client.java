@@ -25,12 +25,12 @@ public class Client {
 		client.run();
 	}
 
-	private ServerInterface localServerStub = null;
+	private ServerInterface serverStub = null;
 
 	public Client() {
 		super();
 
-		localServerStub = loadServerStub("127.0.0.1");
+		serverStub = loadServerStub("127.0.0.1");
 
 	}
 
@@ -76,11 +76,11 @@ public class Client {
 		switch (cmd)
 		{
 			case "create":
-				if(argument1 != null)
+				if(!argument1.isEmpty())
 				{
 					try
 					{
-						result2 = localServerStub.create(argument1);
+						result2 = serverStub.create(argument1);
 					}
 					catch (IOException e)
 					{
@@ -98,7 +98,7 @@ public class Client {
 			case "list":
 				List<FileModel> list  = null;
 				try {
-					list = localServerStub.list();
+					list = serverStub.list();
 				} catch (RemoteException e) {
 					System.err.println("Erreur: " + e.getMessage());
 				}
@@ -110,7 +110,7 @@ public class Client {
 			case "syncLocalDirectory":
 				List<FileModel> serverList = null;
 				try {
-					serverList = localServerStub.list();
+					serverList = serverStub.list();
 				} catch (RemoteException e) {
 					System.err.println("Erreur: " + e.getMessage());
 				}

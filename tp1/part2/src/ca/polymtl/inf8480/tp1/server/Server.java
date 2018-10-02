@@ -4,19 +4,22 @@ package ca.polymtl.inf8480.tp1.server;
 
 import ca.polymtl.inf8480.tp1.shared.FileModel;
 import ca.polymtl.inf8480.tp1.shared.ServerInterface;
+import ca.polymtl.inf8480.tp1.shared.AuthenticationServerInterface;
 
 import java.rmi.ConnectException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.rmi.Naming;
+import java.rmi.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Server implements ServerInterface {
 	private final String serverPath = "src/ca/polymtl/inf8480/tp1/server";
-
+	private AuthenticationServerInterface authenticationService;
 	public static void main(String[] args) {
 //		System.setProperty("java.security.policy","`../../../../permissions.policy");
 		Server server = new Server();
@@ -40,6 +43,12 @@ public class Server implements ServerInterface {
 
 			Registry registry = LocateRegistry.getRegistry();
 			registry.rebind("server", stub);
+			try {
+				authenticationService = (AuthenticationServerInterface) Naming.lookup("authenticationServer");
+			} catch(NotBoundException e) {
+				System.err.println("Erreur: " + e.getMessage());
+			}
+			
 			System.out.println("Server ready.");
 		} catch (ConnectException e) {
 			System.err
@@ -74,21 +83,6 @@ public class Server implements ServerInterface {
 		SaveFileList(fileList);
 
 		return file.createNewFile();
-	}
-
-	@ Override
-	public void push(String filename, byte[] content) {
-		try {
-			byte[] filedata = content;
-			System.err.println(""+filename+content.length);
-         	File file = new File(serverPath + "/FileSystem/" + filename +"txt");
-			BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(serverPath + "/FileSystem/" + filename +"txt"));
-         	output.write(filedata,0,filedata.length);
-			output.flush();
-			output.close();
-		} catch (Exception e) {
-			//TODO: handle exception
-		}
 	}
 
 	void SaveFileList(List<FileModel> list)
@@ -160,10 +154,23 @@ public class Server implements ServerInterface {
 			return(buffer);
 		} catch(Exception e){
 			System.err.println("File download error: "+e.getMessage());
-			e.printStackTrace();
 			return(null);
 		}
 	}
 
-	
+
+	@ Override
+	public void push(String filename, byte[] content) {
+		try {
+			byte[] filedata = content;
+			System.err.println(""+filename+content.length);
+         	File file = new File(serverPath + "/FileSystem/" + filename +"txt");
+			BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(serverPath + "/FileSystem/" + filename +"txt"));
+         	output.write(filedata,0,filedata.length);
+			output.flush();
+			output.close();
+		} catch (Exception e) {
+			System.err.println("File upload error: "+e.getMessage());
+		}
+	}	
 }

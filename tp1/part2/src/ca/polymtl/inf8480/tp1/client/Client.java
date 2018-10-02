@@ -173,6 +173,7 @@ public class Client {
 					System.out.println("Argument non-fourni.");
 				}
 				break;
+				
 			default:
 				System.err.println("Erreur: commande non reconnue.");
 

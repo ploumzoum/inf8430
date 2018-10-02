@@ -134,7 +134,6 @@ public class Client {
 					try
 					{
 						byte[] filedata = serverStub.get(argument1);
-						System.err.println(filedata);
          				File file = new File(clientPath + "/FileSystemClient/" + argument1 +"txt");
          				BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(clientPath + "/FileSystemClient/" + argument1 +"txt"));
          				output.write(filedata,0,filedata.length);
@@ -147,6 +146,28 @@ public class Client {
 						System.err.println("Erreur: " + e.getMessage());
 					}
 				}
+				else
+				{
+					System.out.println("Argument non-fourni.");
+				}
+				break;
+			case "push":
+				if(!argument1.isEmpty())
+				{
+					try {
+						File file = new File(clientPath +  "/FileSystemClient/" +  argument1 + ".txt");
+						
+						byte buffer[] = new byte[(int)file.length()];
+						BufferedInputStream in = new
+							BufferedInputStream(new FileInputStream(clientPath +  "/FileSystemClient/" +  argument1 + ".txt"));
+						in.read(buffer,0,buffer.length);
+						in.close();
+						serverStub.push(argument1, buffer);
+					} catch (Exception e) {
+						//TODO: handle exception
+						System.err.println("Erreur: " + e.getMessage());
+					}
+				} 
 				else
 				{
 					System.out.println("Argument non-fourni.");

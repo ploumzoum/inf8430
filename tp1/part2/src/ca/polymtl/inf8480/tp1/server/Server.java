@@ -76,6 +76,21 @@ public class Server implements ServerInterface {
 		return file.createNewFile();
 	}
 
+	@ Override
+	public void push(String filename, byte[] content) {
+		try {
+			byte[] filedata = content;
+			System.err.println(""+filename+content.length);
+         	File file = new File(serverPath + "/FileSystem/" + filename +"txt");
+			BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(serverPath + "/FileSystem/" + filename +"txt"));
+         	output.write(filedata,0,filedata.length);
+			output.flush();
+			output.close();
+		} catch (Exception e) {
+			//TODO: handle exception
+		}
+	}
+
 	void SaveFileList(List<FileModel> list)
 	{
 		try
@@ -149,4 +164,6 @@ public class Server implements ServerInterface {
 			return(null);
 		}
 	}
+
+	
 }

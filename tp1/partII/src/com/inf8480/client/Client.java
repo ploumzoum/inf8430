@@ -21,34 +21,23 @@ public class Client {
 			distantHostname = args[0];
 		}
 
-		Client client = new Client(distantHostname);
+		Client client = new Client();
 		client.run();
 	}
 
-	FakeServer localServer = null; // Pour tester la latence d'un appel de
-									// fonction normal.
 	private ServerInterface localServerStub = null;
-	private ServerInterface distantServerStub = null;
 
-	public Client(String distantServerHostname) {
+	public Client() {
 		super();
 
-//		if (System.getSecurityManager() == null) {
-//			System.setSecurityManager(new SecurityManager());
-//		}
-
-		localServer = new FakeServer();
 		localServerStub = loadServerStub("127.0.0.1");
 
-		if (distantServerHostname != null) {
-			distantServerStub = loadServerStub(distantServerHostname);
-		}
 	}
 
 	private void run() {
 		while(true)
 		{
-			appelNormal();
+			listenToInput();
 		}
 	}
 
@@ -70,7 +59,7 @@ public class Client {
 		return stub;
 	}
 
-	private void appelNormal() {
+	private void listenToInput() {
 		Scanner reader = new Scanner(System.in);
 		System.out.print("client$ ");
 		String input = reader.nextLine();
@@ -96,8 +85,9 @@ public class Client {
 					catch (IOException e)
 					{
 						e.printStackTrace();
+						System.err.println("Erreur: " + e.getMessage());
 					}
-					System.out.println("Résultat appel normal create: " + result2);
+					System.out.println("Résultat appel create: " + result2);
 				}
 				else
 				{
@@ -106,14 +96,24 @@ public class Client {
 			break; 
 			
 			case "list":
-				List<FileModel> list  = localServer.list();
+				List<FileModel> list  = null;
+				try {
+					list = localServerStub.list();
+				} catch (RemoteException e) {
+					System.err.println("Erreur: " + e.getMessage());
+				}
 				for (FileModel file : list) {
 					System.out.println(file._fileName);
 				}
 			break;
 
 			case "syncLocalDirectory":
-				List<FileModel> serverList = localServer.list();
+				List<FileModel> serverList = null;
+				try {
+					serverList = localServerStub.list();
+				} catch (RemoteException e) {
+					System.err.println("Erreur: " + e.getMessage());
+				}
 				for (FileModel file : serverList) {
 					File newFile = new File( clientPath + "/FileSystemClient/" + file._fileName + ".txt");
 					try

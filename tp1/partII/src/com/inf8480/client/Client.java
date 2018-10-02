@@ -127,7 +127,27 @@ public class Client {
 				}
 				System.out.println("Synchronization completed.");
 			break;
-			default: 
+
+            case "get":
+                if(!argument1.isEmpty())
+                {
+                    try
+                    {
+                        byte[] something = serverStub.get(argument1);
+                    }
+                    catch (IOException e)
+                    {
+                        e.printStackTrace();
+                        System.err.println("Erreur: " + e.getMessage());
+                    }
+                    System.out.println("Résultat appel create: " + result2);
+                }
+                else
+                {
+                    System.out.println("Argument non-fourni.");
+                }
+                break;
+            default:
 				System.err.println("Erreur: commande non reconnue.");
 
 		}

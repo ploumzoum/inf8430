@@ -119,15 +119,33 @@ public class Server implements ServerInterface {
 			}
 			catch (ClassNotFoundException e)
 			{
-				e.printStackTrace();
+                System.err.println("File list error: "+e.getMessage());
 			}
 			in.close();
 			fileIn.close();
 		}
 		catch (IOException e)
 		{
-			e.printStackTrace();
+            System.err.println("File list error: "+e.getMessage());
 		}
 		return fileList;
 	}
+
+	// Tiré de https://www.oracle.com/technetwork/articles/javase/rmi-corba-136641.html
+    @ Override
+    public byte[] get(String fileName){
+        try {
+            File file = new File(fileName);
+            byte buffer[] = new byte[(int)file.length()];
+            BufferedInputStream input = new
+                    BufferedInputStream(new FileInputStream(serverPath +  "/FileSystem/" +  fileName + ".txt"));
+            input.read(buffer,0,buffer.length);
+            input.close();
+            return(buffer);
+        } catch(Exception e){
+            System.err.println("File download error: "+e.getMessage());
+            e.printStackTrace();
+            return(null);
+        }
+    }
 }

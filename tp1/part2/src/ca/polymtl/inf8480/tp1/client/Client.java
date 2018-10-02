@@ -1,4 +1,4 @@
-package ca.polymtl.inf8480.tp1.client;
+package com.inf8480.client;
 
 import java.rmi.AccessException;
 import java.rmi.NotBoundException;
@@ -6,13 +6,14 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.io.*;
-import java.util.Scanner;
 import java.util.List;
+import java.util.Scanner;
 
-import ca.polymtl.inf8480.tp1.shared.*;
+import com.inf8480.shared.FileModel;
+import com.inf8480.shared.ServerInterface;
 
 public class Client {
-	private final String clientPath = "src/ca/polymtl/inf8480/tp1/client";
+	private final String clientPath = "src/com/inf8480/client";
 	public static void main(String[] args) {
 		String distantHostname = null;
 
@@ -20,42 +21,23 @@ public class Client {
 			distantHostname = args[0];
 		}
 
-		Client client = new Client(distantHostname);
+		Client client = new Client();
 		client.run();
 	}
 
-	FakeServer localServer = null; // Pour tester la latence d'un appel de
-									// fonction normal.
-	private ServerInterface localServerStub = null;
-	private ServerInterface distantServerStub = null;
+	private ServerInterface serverStub = null;
 
-	public Client(String distantServerHostname) {
+	public Client() {
 		super();
 
-		if (System.getSecurityManager() == null) {
-			System.setSecurityManager(new SecurityManager());
-		}
+		serverStub = loadServerStub("127.0.0.1");
 
-		localServer = new FakeServer();
-		localServerStub = loadServerStub("127.0.0.1");
-
-		if (distantServerHostname != null) {
-			distantServerStub = loadServerStub(distantServerHostname);
-		}
 	}
 
 	private void run() {
 		while(true)
 		{
-			appelNormal();
-
-			if (localServerStub != null) {
-				appelRMILocal();
-			}
-
-			if (distantServerStub != null) {
-				appelRMIDistant();
-			}
+			listenToInput();
 		}
 	}
 
@@ -77,9 +59,7 @@ public class Client {
 		return stub;
 	}
 
-	private void appelNormal() {
-		long start = System.nanoTime();
-		int result = localServer.execute(4, 7);
+	private void listenToInput() {
 		Scanner reader = new Scanner(System.in);
 		System.out.print("client$ ");
 		String input = reader.nextLine();
@@ -96,33 +76,44 @@ public class Client {
 		switch (cmd)
 		{
 			case "create":
-				if(argument1 != null)
+				if(!argument1.isEmpty())
 				{
 					try
 					{
-						result2 = localServer.create(argument1);
+						result2 = serverStub.create(argument1);
 					}
 					catch (IOException e)
 					{
-						System.out.println("Erreur: " + e.getMessage());
+						e.printStackTrace();
+						System.err.println("Erreur: " + e.getMessage());
 					}
-					System.out.println("Résultat appel normal create: " + result2);
+					System.out.println("Résultat appel create: " + result2);
 				}
 				else
 				{
 					System.out.println("Argument non-fourni.");
 				}
-			break; 
-			
+				break;
+
 			case "list":
-				List<FileModel> list  = localServer.list();
+				List<FileModel> list  = null;
+				try {
+					list = serverStub.list();
+				} catch (RemoteException e) {
+					System.err.println("Erreur: " + e.getMessage());
+				}
 				for (FileModel file : list) {
 					System.out.println(file._fileName);
 				}
-			break;
+				break;
 
 			case "syncLocalDirectory":
-				List<FileModel> serverList = localServer.list();
+				List<FileModel> serverList = null;
+				try {
+					serverList = serverStub.list();
+				} catch (RemoteException e) {
+					System.err.println("Erreur: " + e.getMessage());
+				}
 				for (FileModel file : serverList) {
 					File newFile = new File( clientPath + "/FileSystemClient/" + file._fileName + ".txt");
 					try
@@ -135,41 +126,34 @@ public class Client {
 					}
 				}
 				System.out.println("Synchronization completed.");
-			break;
-			default: 
-		
-			long end = System.nanoTime();
+				break;
 
-			System.out.println("Temps écoulé appel normal: " + (end - start)
-					+ " ns");
-			System.out.println("Résultat appel normal: " + result);
+			case "get":
+				if(!argument1.isEmpty())
+				{
+					try
+					{
+						byte[] something = serverStub.get(argument1);
+					}
+					catch (IOException e)
+					{
+						e.printStackTrace();
+						System.err.println("Erreur: " + e.getMessage());
+					}
+					System.out.println("Résultat appel create: " + result2);
+				}
+				else
+				{
+					System.out.println("Argument non-fourni.");
+				}
+				break;
+			default:
+				System.err.println("Erreur: commande non reconnue.");
+
 		}
 	}
 
-	private void appelRMILocal() {
-		try {
-			long start = System.nanoTime();
-			int result = localServerStub.execute(4, 7);
-			long end = System.nanoTime();
-			System.out.println("Temps écoulé appel RMI local: " + (end - start)
-					+ " ns");
-			System.out.println("Résultat appel RMI local: " + result);
-		} catch (RemoteException e) {
-			System.out.println("Erreur: " + e.getMessage());
-		}
-	}
 
-	private void appelRMIDistant() {
-		try {
-			long start = System.nanoTime();
-			int result = distantServerStub.execute(4, 7);
-			long end = System.nanoTime();
 
-			System.out.println("Temps écoulé appel RMI distant: "
-					+ (end - start) + " ns");
-			System.out.println("Résultat appel RMI distant: " + result);
-		} catch (RemoteException e) {
-			System.out.println("Erreur: " + e.getMessage());
-		}
-	}
+
 }

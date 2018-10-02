@@ -30,10 +30,7 @@
       <change beforePath="$PROJECT_DIR$/../part2/bin/ca/polymtl/inf8480/tp1/shared/UserModel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../part2/src/ca/polymtl/inf8480/tp1/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../part2/src/ca/polymtl/inf8480/tp1/client/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../part2/src/ca/polymtl/inf8480/tp1/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../part2/src/ca/polymtl/inf8480/tp1/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/server/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/shared/ServerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/shared/ServerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../part2/src/ca/polymtl/inf8480/tp1/shared/ServerInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../part2/src/ca/polymtl/inf8480/tp1/shared/ServerInterface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,21 +64,21 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="iml" value="3" />
-          <entry key="java" value="13" />
+          <entry key="java" value="14" />
           <entry key="policy" value="1" />
           <entry key="properties" value="1" />
           <entry key="ser" value="2" />
-          <entry key="xml" value="6" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="3" />
-          <entry key="JAVA" value="13" />
+          <entry key="JAVA" value="14" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="6" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -92,11 +89,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1569">
-              <caret line="128" column="67" selection-start-line="128" selection-start-column="67" selection-end-line="128" selection-end-column="67" />
+            <state relative-caret-position="30">
+              <caret line="2" lean-forward="true" selection-end-line="150" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1925#1926#0" expanded="true" />
@@ -121,7 +118,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/inf8480/client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
+            <state relative-caret-position="413">
               <caret line="135" column="29" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -130,9 +127,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/partII.iml">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inf8480/shared/FileModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -175,10 +176,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1280" />
-    <option name="y" value="36" />
-    <option name="width" value="1920" />
-    <option name="height" value="1044" />
+    <option name="x" value="1548" />
+    <option name="y" value="244" />
+    <option name="width" value="1262" />
+    <option name="height" value="691" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -218,14 +219,6 @@
               <item name="partII" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="inf8480" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="FileSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="partII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="partII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="inf8480" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -242,7 +235,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="partii" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538449772613" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538450584797" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ResponseTime_Analyzer" />
   </component>
   <component name="RecentsManager">
@@ -342,15 +335,16 @@
       <option name="presentableId" value="Default" />
       <updated>1538435897939</updated>
       <workItem from="1538435903045" duration="2211000" />
-      <workItem from="1538439840504" duration="9668000" />
+      <workItem from="1538439840504" duration="10663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11879000" />
+    <option name="totallyTimeSpent" value="12874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="36" width="1920" height="1044" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -399,13 +393,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/client/Save/fs.ser">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/shared/FileModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/AuthenticationService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -420,9 +407,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/partii.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partii.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/module_partii.xml">
@@ -481,6 +465,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/partii.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/partII.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="135" column="29" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/shared/ServerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -491,20 +491,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/client/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/shared/FileModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="135" column="29" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1569">
-          <caret line="128" column="67" selection-start-line="128" selection-start-column="67" selection-end-line="128" selection-end-column="67" />
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-end-line="150" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1925#1926#0" expanded="true" />
@@ -512,9 +509,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/partII.iml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

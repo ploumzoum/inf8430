@@ -138,14 +138,30 @@ public class Client {
 				{
 					try
 					{
-						File file = new File(clientPath + "/FileSystemClient/" + argument1 +".txt");
-						String checksum = Util.getChecksum(file);
+						String checksum = "";
+						try
+						{
+							File file = new File(clientPath + "/FileSystemClient/" + argument1 +".txt");
+							checksum = Util.getChecksum(file);
+						}
+						catch (FileNotFoundException e)
+						{
+							checksum = null; 
+							e.printStackTrace();
+						}
 
-						byte[] filedata = serverStub.get(argument1, checksum);
-         				BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(clientPath + "/FileSystemClient/" + argument1 +".txt"));
-         				output.write(filedata,0,filedata.length);
-         				output.flush();
-         				output.close();
+						try
+						{	
+							byte[] filedata = serverStub.get(argument1, checksum);
+							BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(clientPath + "/FileSystemClient/" + argument1 +".txt"));
+							output.write(filedata,0,filedata.length);
+							output.flush();
+							output.close();
+						}
+						catch (NullPointerException e)
+						{
+							System.out.println("File already up-to-date.");
+						}
 					}
 					catch (IOException e)
 					{

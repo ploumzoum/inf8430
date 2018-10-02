@@ -147,15 +147,20 @@ public class Server implements ServerInterface {
 	public byte[] get(String fileName, String clientChecksum){
 		try {
 			File file = new File(serverPath +  "/FileSystem/" +  fileName + ".txt");
-
 			String serverChecksum = Util.getChecksum(file);
 
-			byte buffer[] = new byte[(int)file.length()];
-			BufferedInputStream input = new
-					BufferedInputStream(new FileInputStream(serverPath +  "/FileSystem/" +  fileName + ".txt"));
-			input.read(buffer,0,buffer.length);
-			input.close();
-			return(buffer);
+			if(clientChecksum == null || !clientChecksum.equals(serverChecksum))
+			{
+				byte buffer[] = new byte[(int)file.length()];
+				BufferedInputStream input = new BufferedInputStream(new FileInputStream(serverPath +  "/FileSystem/" +  fileName + ".txt"));
+				input.read(buffer,0,buffer.length);
+				input.close();
+				return(buffer);
+			}
+			else
+			{
+				return null;
+			}
 		} catch(Exception e){
 			System.err.println("File download error: "+e.getMessage());
 			return(null);

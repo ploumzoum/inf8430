@@ -136,7 +136,7 @@ public class Server implements ServerInterface {
 	@ Override
 	public byte[] get(String fileName){
 		try {
-			File file = new File(fileName);
+			File file = new File(serverPath +  "/FileSystem/" +  fileName + ".txt");
 			byte buffer[] = new byte[(int)file.length()];
 			BufferedInputStream input = new
 					BufferedInputStream(new FileInputStream(serverPath +  "/FileSystem/" +  fileName + ".txt"));

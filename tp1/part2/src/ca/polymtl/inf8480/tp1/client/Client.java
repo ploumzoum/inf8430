@@ -133,14 +133,19 @@ public class Client {
 				{
 					try
 					{
-						byte[] something = serverStub.get(argument1);
+						byte[] filedata = serverStub.get(argument1);
+						System.err.println(filedata);
+         				File file = new File(clientPath + "/FileSystemClient/" + argument1 +"txt");
+         				BufferedOutputStream output = new BufferedOutputStream(new FileOutputStream(clientPath + "/FileSystemClient/" + argument1 +"txt"));
+         				output.write(filedata,0,filedata.length);
+         				output.flush();
+         				output.close();
 					}
 					catch (IOException e)
 					{
 						e.printStackTrace();
 						System.err.println("Erreur: " + e.getMessage());
 					}
-					System.out.println("Résultat appel create: " + result2);
 				}
 				else
 				{

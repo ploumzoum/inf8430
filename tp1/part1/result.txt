@@ -1,0 +1,43 @@
+Temps écoulé appel normal: 2481 ns
+Taille appel normal: 1
+Temps écoulé appel RMI local: 1014163 ns
+Taille appel RMI local: 1
+Temps écoulé appel RMI distant: 1930087 ns
+Taille appel RMI distant: 1
+Temps écoulé appel normal: 287 ns
+Taille appel normal: 2
+Temps écoulé appel RMI local: 548421 ns
+Taille appel RMI local: 2
+Temps écoulé appel RMI distant: 1166592 ns
+Taille appel RMI distant: 2
+Temps écoulé appel normal: 272 ns
+Taille appel normal: 3
+Temps écoulé appel RMI local: 520444 ns
+Taille appel RMI local: 3
+Temps écoulé appel RMI distant: 1332457 ns
+Taille appel RMI distant: 3
+Temps écoulé appel normal: 1784 ns
+Taille appel normal: 4
+Temps écoulé appel RMI local: 693407 ns
+Taille appel RMI local: 4
+Temps écoulé appel RMI distant: 1992691 ns
+Taille appel RMI distant: 4
+Temps écoulé appel normal: 377 ns
+Taille appel normal: 5
+Temps écoulé appel RMI local: 679565 ns
+Taille appel RMI local: 5
+Temps écoulé appel RMI distant: 9519631 ns
+Taille appel RMI distant: 5
+Temps écoulé appel normal: 536 ns
+Taille appel normal: 6
+Temps écoulé appel RMI local: 1792372 ns
+Taille appel RMI local: 6
+Temps écoulé appel RMI distant: 86739925 ns
+Taille appel RMI distant: 6
+Temps écoulé appel normal: 3167 ns
+Taille appel normal: 7
+Temps écoulé appel RMI local: 36896605 ns
+Taille appel RMI local: 7
+Temps écoulé appel RMI distant: 866079776 ns
+Taille appel RMI distant: 7
+

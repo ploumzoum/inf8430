@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="part2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/part2/server.jar!/" />
+      <root url="jar://$PROJECT_DIR$/part2/client.jar!/" />
+      <root url="jar://$PROJECT_DIR$/part2/shared.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

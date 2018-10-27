@@ -21,6 +21,9 @@ public class Server extends OperationsImpl{
             Operations stub = (Operations) UnicastRemoteObject.exportObject(obj, 0);
 
             // Binding the remote object (stub) in the registry
+            // Registry registry = LocateRegistry.getRegistry()
+
+            // To run server at the moment without the distributor
             Registry registry = LocateRegistry.createRegistry(1099);
 
             registry.rebind("Operations", stub);

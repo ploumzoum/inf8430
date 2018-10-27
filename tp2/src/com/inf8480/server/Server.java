@@ -7,7 +7,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-public class Server extends OperationsImpl{
+public class Server {
 
     public Server() {}
 
@@ -18,7 +18,7 @@ public class Server extends OperationsImpl{
 
             // Exporting the object of implementation class
             // (here we are exporting the remote object to the stub)
-            Operations stub = (Operations) UnicastRemoteObject.exportObject(obj, 0);
+            Operations skeleton = (Operations) UnicastRemoteObject.exportObject(obj, 5001);
 
             // Binding the remote object (stub) in the registry
             // Registry registry = LocateRegistry.getRegistry()
@@ -26,7 +26,7 @@ public class Server extends OperationsImpl{
             // To run server at the moment without the distributor
             Registry registry = LocateRegistry.createRegistry(5001);
 
-            registry.rebind("Operations", stub);
+            registry.rebind("Operations", skeleton);
             System.err.println("Server ready");
         } catch (Exception e) {
             System.err.println("Server exception: " + e.toString());

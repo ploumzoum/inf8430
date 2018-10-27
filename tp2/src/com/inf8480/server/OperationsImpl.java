@@ -2,11 +2,17 @@ package com.inf8480.server;
 
 import com.inf8480.common.Operations;
 
-import java.rmi.RemoteException;
 
 public class OperationsImpl implements Operations {
 
-
+    @Override
+    public int sum(int[] results) {
+        int sum = 0;
+        for (int result: results) {
+            sum = (sum + result) % 4000;
+        }
+        return sum;
+    }
     /**
      * Methodes utilitaires pour effectuer les operations du TP2.
      *
@@ -16,7 +22,7 @@ public class OperationsImpl implements Operations {
      *
      */
     @Override
-    public int pell(int x) throws RemoteException {
+    public int pell(int x) {
         if (x == 0)
             return 0;
         if (x == 1)
@@ -25,7 +31,7 @@ public class OperationsImpl implements Operations {
     }
 
     @Override
-    public int prime(int x) throws RemoteException {
+    public int prime(int x) {
         int highestPrime = 0;
 
         for (int i = 1; i <= x; ++i)

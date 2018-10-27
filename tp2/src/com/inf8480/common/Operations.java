@@ -1,4 +1,4 @@
-package ca.polymtl.inf8430;
+package com.inf8480.common;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

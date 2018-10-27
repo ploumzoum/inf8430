@@ -1,15 +1,21 @@
-package ca.polymtl.inf8430;
+package com.inf8480.server;
+
+import com.inf8480.common.Operations;
 
 import java.rmi.RemoteException;
-import java.rmi.server.UnicastRemoteObject;
 
-public class OperationsImpl extends UnicastRemoteObject
-implements Operations{
+public class OperationsImpl implements Operations {
 
-    protected OperationsImpl() throws RemoteException {
-        super();
-    }
 
+    /**
+     * Methodes utilitaires pour effectuer les operations du TP2.
+     *
+     * L'implementation des operations est volontairement non-optimale.
+     *
+     * @author Simon Delisle et Francois Doray
+     *
+     */
+    @Override
     public int pell(int x) throws RemoteException {
         if (x == 0)
             return 0;
@@ -18,6 +24,7 @@ implements Operations{
         return 2 * pell(x - 1) + pell(x - 2);
     }
 
+    @Override
     public int prime(int x) throws RemoteException {
         int highestPrime = 0;
 
@@ -39,6 +46,8 @@ implements Operations{
             if (x % i == 0)
                 return false;
         }
+
         return true;
     }
+
 }

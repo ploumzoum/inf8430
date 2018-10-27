@@ -24,7 +24,7 @@ public class Server extends OperationsImpl{
             // Registry registry = LocateRegistry.getRegistry()
 
             // To run server at the moment without the distributor
-            Registry registry = LocateRegistry.createRegistry(1099);
+            Registry registry = LocateRegistry.createRegistry(5001);
 
             registry.rebind("Operations", stub);
             System.err.println("Server ready");

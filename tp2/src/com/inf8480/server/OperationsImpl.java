@@ -14,10 +14,7 @@ public class OperationsImpl implements Operations {
 
     private int temperResult(int result) {
         int randomNum = rand.nextInt(100 + 1);
-        boolean decision = randomNum < _maliciousness;
-        System.out.println("randomNum " + randomNum);
-        System.out.println("temperResult ? " + decision);
-        if(decision) {
+        if(randomNum < _maliciousness) {
             result += randomNum;
         }
         return result;

@@ -1,6 +1,7 @@
 package com.inf8480.distributor;
 
 import com.inf8480.common.Calculator;
+import com.inf8480.common.NameServiceInterface;
 import com.inf8480.common.Operation;
 
 import java.io.BufferedReader;
@@ -30,6 +31,7 @@ public class Distributor {
         super();
 
         stub = loadCalculatorStub("127.0.0.1");
+        nameServiceStub = loadNameService("127.0.0.1");
     }
 
     private void run() {
@@ -131,5 +133,23 @@ public class Distributor {
         }
         operations.clear();
         return array;
+    }
+
+    private NameServiceInterface nameServiceStub;
+    private NameServiceInterface loadNameService(String hostname)
+    {
+        NameServiceInterface stub = null;
+
+        try {
+            Registry registry = LocateRegistry.getRegistry(hostname);
+            stub = (NameServiceInterface) registry.lookup("nameService");
+        } catch (NotBoundException e) {
+            System.out.println("Erreur: Le nom '" + e.getMessage()
+                    + "' n'est pas défini dans le registre.");
+        } catch (AccessException e) {
+            System.out.println("Erreur: " + e.getMessage());
+        } catch (RemoteException e) {
+            System.out.println("Erreur: " + e.getMessage());
+        }
     }
 }

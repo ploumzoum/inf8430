@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2274213-e3de-4dba-b098-379e23a1b644" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Operations.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/Distributor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/Distributor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/Operation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/operations/operations-1481" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/operations/operations-1949" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/operations/operations-2809" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/operations/operations-3216" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/operations/operations-588" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/OperationsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/OperationsImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/common/Operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/common/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inf8480/common/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/common/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inf8480/common/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/common/Operation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/common/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/operations/operations-1481" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-1481" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/operations/operations-1949" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-1949" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/operations/operations-2809" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-2809" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/operations/operations-3216" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-3216" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/operations/operations-588" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-588" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/OperationsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/server/OperationsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/server/Server.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -87,28 +89,32 @@
     <session id="799604589">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="3" />
+          <entry key="java" value="4" />
+          <entry key="operations-588" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="3" />
+          <entry key="JAVA" value="4" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1656" />
+          <entry key="java" value="2381" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1656" />
+          <entry key="JAVA" value="2381" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -122,8 +128,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="197">
+              <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inf8480/common/Operation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="107" column="13" lean-forward="true" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/OperationsImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/inf8480/common/Calculator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,33 +176,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#892#893#0" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1037#1038#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/inf8480/common/Operation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="98" column="64" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="64" />
+            <state relative-caret-position="212">
+              <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,22 +186,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/OperationsImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-588">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/inf8480/common/Calculator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -211,10 +216,10 @@
         <option value="$PROJECT_DIR$/src/com/inf8480/server/OperationsImpl.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/common/Operations.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/distributor/Operations.java" />
-        <option value="$PROJECT_DIR$/src/com/inf8480/common/Calculator.java" />
-        <option value="$PROJECT_DIR$/src/com/inf8480/server/Server.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/distributor/operations/Pell.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/server/Operations.java" />
+        <option value="$PROJECT_DIR$/src/com/inf8480/common/Calculator.java" />
+        <option value="$PROJECT_DIR$/src/com/inf8480/server/Server.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/common/Operation.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" />
@@ -228,10 +233,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1709" />
-    <option name="y" value="631" />
-    <option name="width" value="1242" />
-    <option name="height" value="689" />
+    <option name="y" value="36" />
+    <option name="width" value="636" />
+    <option name="height" value="764" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -275,20 +279,28 @@
               <item name="tp2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="inf8480" type="462c0819:PsiDirectoryNode" />
+              <item name="distributor" type="462c0819:PsiDirectoryNode" />
+              <item name="inputFiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tp2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="inf8480" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541383732480" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541445814973" />
     <property name="last.edited.regexp" value="Sample Text" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
@@ -378,15 +390,13 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="Application.Server (1)" />
       <item itemvalue="Application.Distributor" />
       <item itemvalue="Cucumber java.All Features in: server" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Distributor" />
-        <item itemvalue="Application.Server (1)" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="Cucumber java.All Features in: server" />
       </list>
     </recent_temporary>
@@ -403,6 +413,8 @@
       <updated>1540655476066</updated>
       <workItem from="1540655477756" duration="17623000" />
       <workItem from="1540833317550" duration="6114000" />
+      <workItem from="1541440778461" duration="2329000" />
+      <workItem from="1541443920426" duration="1894000" />
     </task>
     <servers />
   </component>
@@ -412,13 +424,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34361000" />
+    <option name="totallyTimeSpent" value="38584000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="36" width="1920" height="1044" extended-state="6" />
+    <frame x="0" y="36" width="1280" height="764" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.2524013" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.33549434" />
       <window_info id="Structure" order="1" sideWeight="0.50117093" side_tool="true" weight="0.32881355" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -427,12 +439,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32896176" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32677597" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32440946" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32896176" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.09576138" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32755905" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
@@ -445,10 +457,10 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Database" order="8" visible="true" weight="0.0" />
+      <window_info anchor="right" id="Database" order="8" weight="0.15640195" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.2524013" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.33549434" />
       <window_info id="Structure" order="1" sideWeight="0.50117093" side_tool="true" weight="0.32881355" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -457,25 +469,25 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32896176" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32677597" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32440946" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32896176" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.09576138" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32755905" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.2497332" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497332" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.32977587" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.15640195" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,13 +532,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/OperationModel.java" />
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/common/OperationModel.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/operations/pell-test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/operations/pell-test" />
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-2809">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1001" />
@@ -537,11 +543,6 @@
         <state relative-caret-position="-1001" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-588">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-937" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-1481">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3">
@@ -549,10 +550,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/operations/Pell.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-1949">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-588">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+        <state relative-caret-position="240">
+          <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="55" column="39" lean-forward="true" selection-start-line="55" selection-start-column="39" selection-end-line="55" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -561,55 +573,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/common/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/operations/Pell.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/OperationsImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/common/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-1949">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/OperationsImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="197">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="98" column="64" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="137">
+          <caret line="107" column="13" lean-forward="true" selection-start-line="107" selection-start-column="13" selection-end-line="107" selection-end-column="13" />
         </state>
       </provider>
     </entry>

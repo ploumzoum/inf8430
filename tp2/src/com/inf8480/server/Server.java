@@ -40,7 +40,7 @@ public class Server {
             // To run server at the moment without the distributor
             Registry registry = LocateRegistry.createRegistry(5001);
 
-            registry.rebind("OperationsImpl", skeleton);
+            registry.rebind("Calculator", skeleton);
             System.out.println("Server ready, maliciousness is set to " + maliciousness);
 
 

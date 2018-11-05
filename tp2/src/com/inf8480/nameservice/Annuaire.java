@@ -3,8 +3,10 @@ package com.inf8480.nameservice;
 
 import com.inf8480.common.NameServiceInterface;
 
+import java.rmi.ConnectException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,19 +24,19 @@ public class Annuaire  implements NameServiceInterface{
 
     private void run() {
         try {
-            // Binding the remote object (stub) in the registry
-            // Registry registry = LocateRegistry.getRegistry()
+            NameServiceInterface stub = (NameServiceInterface) UnicastRemoteObject
+                    .exportObject(this, 0);
 
-            // To run server at the moment without the distributor
-            Registry registry = LocateRegistry.createRegistry(5010);
-
-            registry.rebind("OperationsImpl", skeleton);
-            System.out.println("Server ready, maliciousness is set to " + maliciousness);
-
-
+            Registry registry = LocateRegistry.getRegistry();
+            registry.rebind("nameService", stub);
+            System.out.println("Name Server ready.");
+        } catch (ConnectException e) {
+            System.err
+                    .println("Impossible de se connecter au registre RMI. Est-ce que rmiregistry est lancé ?");
+            System.err.println();
+            System.err.println("Erreur: " + e.getMessage());
         } catch (Exception e) {
-            System.err.println("Server exception: " + e.toString());
-            e.printStackTrace();
+            System.err.println("Erreur: " + e.getMessage());
         }
     }
 

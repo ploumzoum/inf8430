@@ -151,5 +151,6 @@ public class Distributor {
         } catch (RemoteException e) {
             System.out.println("Erreur: " + e.getMessage());
         }
+        return stub;
     }
 }

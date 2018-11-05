@@ -1,8 +1,14 @@
 package com.inf8480.server;
 
 import com.inf8480.common.Calculator;
+import com.inf8480.common.NameServiceInterface;
 import com.inf8480.common.Operation;
 
+import java.rmi.AccessException;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -25,6 +31,8 @@ public class CalculatorImpl implements Calculator {
         rand = new Random();
         _maliciousness = maliciousness;
         _capacity = capacity;
+        nameServiceStub = loadNameService("127.0.0.1");
+        nameServiceStub.register("127.0.0.1");
     }
 
     @Override
@@ -57,5 +65,24 @@ public class CalculatorImpl implements Calculator {
 
         }
         return task;
+    }
+
+    private NameServiceInterface nameServiceStub;
+    private NameServiceInterface loadNameService(String hostname)
+    {
+        NameServiceInterface stub = null;
+
+        try {
+            Registry registry = LocateRegistry.getRegistry(hostname);
+            stub = (NameServiceInterface) registry.lookup("nameService");
+        } catch (NotBoundException e) {
+            System.out.println("Erreur: Le nom '" + e.getMessage()
+                    + "' n'est pas défini dans le registre.");
+        } catch (AccessException e) {
+            System.out.println("Erreur: " + e.getMessage());
+        } catch (RemoteException e) {
+            System.out.println("Erreur: " + e.getMessage());
+        }
+        return stub;
     }
 }

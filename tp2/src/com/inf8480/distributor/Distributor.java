@@ -149,7 +149,7 @@ public class Distributor {
         NameServiceInterface stub = null;
 
         try {
-            Registry registry = LocateRegistry.getRegistry(hostname);
+            Registry registry = LocateRegistry.getRegistry(hostname, 5010);
             stub = (NameServiceInterface) registry.lookup("nameService");
         } catch (NotBoundException e) {
             System.out.println("Erreur: Le nom '" + e.getMessage()

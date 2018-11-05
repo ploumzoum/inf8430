@@ -20,14 +20,15 @@ public class Annuaire  implements NameServiceInterface{
     public static void main(String[] args) {
         Annuaire server = new Annuaire();
         server.run();
+        while(true);
     }
 
     private void run() {
         try {
             NameServiceInterface stub = (NameServiceInterface) UnicastRemoteObject
-                    .exportObject(this, 0);
+                    .exportObject(this, 5010);
 
-            Registry registry = LocateRegistry.createRegistry(5001);
+            Registry registry = LocateRegistry.createRegistry(5010);
             registry.rebind("nameService", stub);
             System.out.println("Name Server ready.");
         } catch (ConnectException e) {

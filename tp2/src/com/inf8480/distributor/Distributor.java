@@ -13,6 +13,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -37,6 +38,7 @@ public class Distributor {
             parseFile();
             result = dispatchOperations();
             System.out.println("Result: " + result);
+            operations.clear();
         }
         System.out.println("Byebye");
     }
@@ -48,7 +50,7 @@ public class Distributor {
 
         try {
             Registry registry = LocateRegistry.getRegistry(hostname, 5001);
-            stub = (Calculator) registry.lookup("Operations");
+            stub = (Calculator) registry.lookup("Calculator");
         } catch (NotBoundException e) {
             System.out.println("Error: Name '" + e.getMessage()
                     + "' not defined in RMIregistry.");
@@ -81,7 +83,7 @@ public class Distributor {
                 String[] parsed = line.split("\\s+");
                 try {
                     int[] argument = {Integer.parseInt(parsed[1])};
-                    operations.add(new Operation(parsed[0], argument);
+                    operations.add(new Operation(parsed[0], argument));
                 } catch (Exception e) {
                     System.out.println("Error:" + e.getMessage());
                 }
@@ -91,16 +93,34 @@ public class Distributor {
         }
     }
 
-    private void dispatchOperations() {
+    private int dispatchOperations() {
         // implement server selection logic here
+        while(!isTaskCompleted()) {
+            try {
+                operations = stub.executeTask(operations);
+            } catch (RemoteException e) {
+                System.err.println("Remote Exception" + e.getMessage());
+            }
+        }
+
+        Operation sumItAll = new Operation("sum", extractResults());
+        operations.add(sumItAll);
         try {
-            stub.executeTask((Operation[]) operations.toArray());
+            operations = stub.executeTask(operations);
         } catch (RemoteException e) {
             System.err.println("Remote Exception" + e.getMessage());
         }
-        return result;
+        return operations.get(0)._result;
     }
 
+    private boolean isTaskCompleted() {
+        for (Operation operation: operations) {
+            if (operation._result == -1) {
+                return false;
+            }
+        }
+        return true;
+    }
     private int[] extractResults()
     {
         int[] array = new int[operations.size()];

@@ -1,6 +1,7 @@
 package com.inf8480.distributor;
 
 import com.inf8480.common.Calculator;
+import com.inf8480.common.CalculatorModel;
 import com.inf8480.common.NameServiceInterface;
 import com.inf8480.common.Operation;
 
@@ -13,10 +14,7 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Distributor {
     private final String filePath = "src/com/inf8480/distributor/inputFiles/";
@@ -30,8 +28,12 @@ public class Distributor {
     public Distributor() {
         super();
 
-        stub = loadCalculatorStub("127.0.0.1");
+        calculators = new ArrayList<CalculatorModel>();
         nameServiceStub = loadNameService("127.0.0.1");
+        List<String> availableHosts = nameServiceStub.fetchAllAvailable();
+        for (String host: availableHosts) {
+            calculators.add(new CalculatorModel(loadCalculatorStub(host), 100));
+        }
     }
 
     private void run() {
@@ -45,7 +47,7 @@ public class Distributor {
         System.out.println("Byebye");
     }
 
-    private Calculator stub;
+    private List<CalculatorModel> calculators;
 
     private Calculator loadCalculatorStub(String hostname) {
         Calculator stub = null;
@@ -99,7 +101,7 @@ public class Distributor {
         // implement server selection logic here
         while(!isTaskCompleted()) {
             try {
-                operations = stub.executeTask(operations);
+                operations = calculators.get(0).serverStub.executeTask(operations);
             } catch (RemoteException e) {
                 System.err.println("Remote Exception" + e.getMessage());
             }
@@ -108,7 +110,7 @@ public class Distributor {
         Operation sumItAll = new Operation("sum", extractResults());
         operations.add(sumItAll);
         try {
-            operations = stub.executeTask(operations);
+            operations = calculators.get(0).serverStub.executeTask(operations);
         } catch (RemoteException e) {
             System.err.println("Remote Exception" + e.getMessage());
         }

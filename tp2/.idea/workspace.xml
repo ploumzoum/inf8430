@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2274213-e3de-4dba-b098-379e23a1b644" name="Default Changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Calculator.class" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Calculator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Operation.class" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Operation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/Distributor.class" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/Distributor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/CalculatorImpl.class" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/CalculatorImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/OperationsImpl.class" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/OperationsImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/Server.class" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/Server.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inf8480/common/NameServiceInterface.java" afterPath="$PROJECT_DIR$/src/com/inf8480/common/NameServiceInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" afterPath="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java" afterPath="$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/nameservice/Annuaire.class" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/nameservice/Annuaire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/inf8480/nameservice/Annuaire.java" afterPath="$PROJECT_DIR$/src/com/inf8480/nameservice/Annuaire.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +17,8 @@
       <file leaf-file-name="Server.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="448">
+              <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,18 +29,18 @@
       <file leaf-file-name="CalculatorImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
+            <state relative-caret-position="-319">
               <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Distributor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Distributor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="405">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,18 +58,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Annuaire.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Annuaire.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/inf8480/nameservice/Annuaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="31" />
+            <state relative-caret-position="396">
+              <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#370#371#0" expanded="true" />
                 <element signature="e#428#429#0" expanded="true" />
-                <element signature="e#1413#1421#0" expanded="true" />
-                <element signature="e#1901#1902#0" expanded="true" />
-                <element signature="e#1950#1951#0" expanded="true" />
+                <element signature="e#1420#1428#0" expanded="true" />
+                <element signature="e#1908#1909#0" expanded="true" />
+                <element signature="e#1957#1958#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,13 +129,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/inf8480/nameservice/Annuaire.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/common/CalculatorModel.java" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/com/inf8480/common/NameServiceInterface.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java" />
         <option value="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" />
+        <option value="$PROJECT_DIR$/src/com/inf8480/nameservice/Annuaire.java" />
       </list>
     </option>
   </component>
@@ -528,7 +520,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1173" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -689,16 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/common/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -733,21 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/nameservice/Annuaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="51" column="31" lean-forward="false" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#1413#1421#0" expanded="true" />
-            <element signature="e#1901#1902#0" expanded="true" />
-            <element signature="e#1950#1951#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/common/NameServiceInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -758,20 +724,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
+        <state relative-caret-position="-319">
           <caret line="39" column="32" lean-forward="false" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/server/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="40" column="32" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="448">
+          <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/inf8480/nameservice/Annuaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#1420#1428#0" expanded="true" />
+            <element signature="e#1908#1909#0" expanded="true" />
+            <element signature="e#1957#1958#0" expanded="true" />
           </folding>
         </state>
       </provider>

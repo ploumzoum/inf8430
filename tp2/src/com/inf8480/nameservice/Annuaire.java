@@ -27,7 +27,7 @@ public class Annuaire  implements NameServiceInterface{
             NameServiceInterface stub = (NameServiceInterface) UnicastRemoteObject
                     .exportObject(this, 0);
 
-            Registry registry = LocateRegistry.getRegistry();
+            Registry registry = LocateRegistry.createRegistry(5001);
             registry.rebind("nameService", stub);
             System.out.println("Name Server ready.");
         } catch (ConnectException e) {

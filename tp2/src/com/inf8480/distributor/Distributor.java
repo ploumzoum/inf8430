@@ -30,9 +30,15 @@ public class Distributor {
 
         calculators = new ArrayList<CalculatorModel>();
         nameServiceStub = loadNameService("127.0.0.1");
-        List<String> availableHosts = nameServiceStub.fetchAllAvailable();
-        for (String host: availableHosts) {
-            calculators.add(new CalculatorModel(loadCalculatorStub(host), 100));
+        try {
+            List<String> availableHosts = nameServiceStub.fetchAllAvailable();
+            for (String host : availableHosts) {
+                calculators.add(new CalculatorModel(loadCalculatorStub(host), 100));
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
         }
     }
 

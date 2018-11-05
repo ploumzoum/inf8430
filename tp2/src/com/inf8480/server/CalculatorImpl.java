@@ -32,7 +32,13 @@ public class CalculatorImpl implements Calculator {
         _maliciousness = maliciousness;
         _capacity = capacity;
         nameServiceStub = loadNameService("127.0.0.1");
-        nameServiceStub.register("127.0.0.1");
+        try {
+            nameServiceStub.register("127.0.0.1");
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 
     @Override

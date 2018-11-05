@@ -1,11 +1,12 @@
 package com.inf8480.server;
 
 
-import com.inf8480.common.Operations;
+import com.inf8480.common.Calculator;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.Random;
 
 public class Server {
 
@@ -13,19 +14,25 @@ public class Server {
     public Server() {}
 
     public static void main(String[] args) {
+        Server server = new Server();
+
+        if (args.length == 2) {
+            server.run(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+        } else {
+            server.run(0, 100);
+        }
+
+    }
+
+    private void run(int maliciousness, int capacity) {
         try {
-            int maliciousness;
-            if (args.length > 0) {
-                maliciousness = Integer.parseInt(args[0]);
-            } else {
-                maliciousness = 0;
-            }
+
             // Instantiating the implementation class
-            OperationsImpl obj = new OperationsImpl(maliciousness);
+            CalculatorImpl obj = new CalculatorImpl(maliciousness, capacity);
 
             // Exporting the object of implementation class
             // (here we are exporting the remote object to the stub)
-            Operations skeleton = (Operations) UnicastRemoteObject.exportObject(obj, 5001);
+            Calculator skeleton = (Calculator) UnicastRemoteObject.exportObject(obj, 5001);
 
             // Binding the remote object (stub) in the registry
             // Registry registry = LocateRegistry.getRegistry()
@@ -33,7 +40,7 @@ public class Server {
             // To run server at the moment without the distributor
             Registry registry = LocateRegistry.createRegistry(5001);
 
-            registry.rebind("Operations", skeleton);
+            registry.rebind("OperationsImpl", skeleton);
             System.out.println("Server ready, maliciousness is set to " + maliciousness);
 
 
@@ -42,4 +49,9 @@ public class Server {
             e.printStackTrace();
         }
     }
+
+
+
+
+
 }

@@ -1,6 +1,7 @@
 package com.inf8480.distributor;
 
-import com.inf8480.common.Operations;
+import com.inf8480.common.Calculator;
+import com.inf8480.common.Operation;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -16,8 +17,9 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class Distributor {
-    private final String filePath = "src/com/inf8480/distributor/operations/";
+    private final String filePath = "src/com/inf8480/distributor/inputFiles/";
     private String userInput  = "";
+    private ArrayList<Operation> operations = new ArrayList<>();
     public static void main(String[] args) {
         Distributor distributor = new Distributor();
         distributor.run();
@@ -26,7 +28,7 @@ public class Distributor {
     public Distributor() {
         super();
 
-        stub = loadOperationsStub("127.0.0.1");
+        stub = loadCalculatorStub("127.0.0.1");
     }
 
     private void run() {
@@ -39,14 +41,14 @@ public class Distributor {
         System.out.println("Byebye");
     }
 
-    private Operations stub;
+    private Calculator stub;
 
-    private Operations loadOperationsStub(String hostname) {
-        Operations stub = null;
+    private Calculator loadCalculatorStub(String hostname) {
+        Calculator stub = null;
 
         try {
             Registry registry = LocateRegistry.getRegistry(hostname, 5001);
-            stub = (Operations) registry.lookup("Operations");
+            stub = (Calculator) registry.lookup("Operations");
         } catch (NotBoundException e) {
             System.out.println("Error: Name '" + e.getMessage()
                     + "' not defined in RMIregistry.");
@@ -70,7 +72,6 @@ public class Distributor {
         return true;
     }
 
-    private ArrayList<Operation> operations = new ArrayList<>();
     private void parseFile() {
         try {
             File file = new File(filePath + userInput);
@@ -79,7 +80,8 @@ public class Distributor {
             while ((line = reader.readLine()) != null) {
                 String[] parsed = line.split("\\s+");
                 try {
-                    operations.add(new Operation(parsed[0], Integer.parseInt(parsed[1])));
+                    int[] argument = {Integer.parseInt(parsed[1])};
+                    operations.add(new Operation(parsed[0], argument);
                 } catch (Exception e) {
                     System.out.println("Error:" + e.getMessage());
                 }
@@ -89,29 +91,12 @@ public class Distributor {
         }
     }
 
-    private int dispatchOperations() {
+    private void dispatchOperations() {
         // implement server selection logic here
-        for (Operation operation: operations) {
-            if (operation._name.equals("prime")) {
-                try {
-                    operation._result = stub.prime(operation._argument);
-                } catch (RemoteException e) {
-                    System.out.println("RemoteException: " + e.getMessage());
-                }
-            } else if (operation._name.equals("pell")) {
-                try {
-                    operation._result = stub.pell(operation._argument);
-                } catch (RemoteException e) {
-                    System.out.println("RemoteException: " + e.getMessage());
-                }
-            }
-        }
-
-        int result = 0;
         try {
-            result =  stub.sum(extractResults());
+            stub.executeTask((Operation[]) operations.toArray());
         } catch (RemoteException e) {
-            System.out.println("RemoteException: " + e.getMessage());
+            System.err.println("Remote Exception" + e.getMessage());
         }
         return result;
     }

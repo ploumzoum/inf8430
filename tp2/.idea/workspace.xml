@@ -8,54 +8,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2274213-e3de-4dba-b098-379e23a1b644" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Remise/Distributor.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Remise/inputFiles/operations-1481" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Remise/inputFiles/operations-1949" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Remise/inputFiles/operations-2809" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Remise/inputFiles/operations-3216" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Remise/inputFiles/operations-588" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputFiles/operations-1481" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputFiles/operations-1949" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputFiles/operations-2809" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputFiles/operations-3216" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inputFiles/operations-588" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tp1/part2/bin/ca/polymtl/inf8480/tp1/server/FileSystem/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../tp1/part2/bin/ca/polymtl/inf8480/tp1/server/FileSystem/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/Calculator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/out/production/Server/tp2/CalculatorImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/out/production/Server/tp2/OperationsImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/out/production/Server/tp2/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/out/production/Server/tp2/common/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/out/production/Server/tp2/common/CalculatorModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/out/production/Server/tp2/common/NameServiceInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/out/production/Server/tp2/common/Operation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/out/production/Server/tp2/common/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator/src/tp2/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/src/tp2/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/Distributor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/Distributor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Distributor/src/tp2/Distributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/Distributor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NameService/NameService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/NameService.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NameService/src/tp2/Annuaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/src/tp2/Annuaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/Server/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/out/production/Calculator/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/Server/tp2/CalculatorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/out/production/Calculator/tp2/CalculatorImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/Server/tp2/OperationsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/out/production/Calculator/tp2/OperationsImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/Server/tp2/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/out/production/Calculator/tp2/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/Server/tp2/common/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/out/production/Calculator/tp2/common/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/Server/tp2/common/CalculatorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/out/production/Calculator/tp2/common/CalculatorModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/Server/tp2/common/NameServiceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/out/production/Calculator/tp2/common/NameServiceInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/Server/tp2/common/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/out/production/Calculator/tp2/common/Operation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/out/production/Server/tp2/common/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/out/production/Calculator/tp2/common/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/Calculator.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Remise/Calculator.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/Distributor.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/NameService.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Remise/NameService.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NameService/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/out/production/NameService/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NameService/tp2/Annuaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/out/production/NameService/tp2/Annuaire.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NameService/tp2/common/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/out/production/NameService/tp2/common/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NameService/tp2/common/CalculatorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/out/production/NameService/tp2/common/CalculatorModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NameService/tp2/common/NameServiceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/out/production/NameService/tp2/common/NameServiceInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NameService/tp2/common/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/out/production/NameService/tp2/common/Operation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/NameService/tp2/common/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/out/production/NameService/tp2/common/Task.class" afterDir="false" />
-    </list>
+    <list default="true" id="e2274213-e3de-4dba-b098-379e23a1b644" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -184,8 +137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/src/tp2/CalculatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="544">
+              <caret line="36" column="55" lean-forward="true" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -193,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/src/tp2/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="74" />
+            <state relative-caret-position="94">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
             </state>
           </provider>
         </entry>
@@ -229,8 +182,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NameService/src/tp2/Annuaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+            <state relative-caret-position="114">
+              <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1416#1424#0" expanded="true" />
@@ -741,22 +694,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/src/tp2/CalculatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="544">
+          <caret line="36" column="55" lean-forward="true" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/src/tp2/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="74" />
+        <state relative-caret-position="94">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NameService/src/tp2/Annuaire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="28" column="46" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+        <state relative-caret-position="114">
+          <caret line="29" column="62" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1416#1424#0" expanded="true" />

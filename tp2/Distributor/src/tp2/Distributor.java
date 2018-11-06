@@ -26,6 +26,7 @@ public class Distributor {
         distributor.run();
     }
 
+
     public Distributor() {
         super();
         loadCalculators();
@@ -94,9 +95,25 @@ public class Distributor {
         }
     }
 
+    private void sortCalculators() {
+        int n = calculators.size();
+        CalculatorModel temp;
+        if (calculators.size() > 1) {
+            for(int i = 0; i < n; i++) {
+                for(int j = 1; j < (n-i); j++) {
+                    if(calculators.get(j-1).serverCapacity < calculators.get(j).serverCapacity) {
+                        temp = calculators.get(j-1);
+                        calculators.remove(j-1);
+                        calculators.add(j, temp);
+                    }
+                }
+            }
+        }
+    }
+
     private int dispatchTasks() {
         // implement server selection logic here
-
+        sortCalculators();
         while(_taskList.size() > 0) {
             Calculator calculatorStub = calculators.get(0).serverStub;
             try {

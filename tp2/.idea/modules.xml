@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/tp2.iml" filepath="$PROJECT_DIR$/tp2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calculator/Calculator.iml" filepath="$PROJECT_DIR$/Calculator/Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Distributor/Distributor.iml" filepath="$PROJECT_DIR$/Distributor/Distributor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NameService/NameService.iml" filepath="$PROJECT_DIR$/NameService/NameService.iml" />
     </modules>
   </component>
 </project>

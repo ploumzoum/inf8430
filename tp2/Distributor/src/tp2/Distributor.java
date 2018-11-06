@@ -6,7 +6,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.rmi.AccessException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -161,7 +163,8 @@ public class Distributor {
     private void loadCalculators()
     {
         try {
-            Registry registry = LocateRegistry.getRegistry(_hostname, 5010);
+            String hostname = InetAddress.getLocalHost().getHostAddress();
+            Registry registry = LocateRegistry.getRegistry(hostname, 5010);
             NameServiceInterface nameServiceStub = (NameServiceInterface) registry.lookup("nameService");
             List<String> availableHosts = nameServiceStub.fetchAllAvailable();
             for (String host : availableHosts) {
@@ -175,6 +178,10 @@ public class Distributor {
             System.out.println("Erreur: " + e.getMessage());
         } catch (RemoteException e) {
             System.out.println("Erreur chargement service de nom: " + e.getMessage());
+        } catch (UnknownHostException e)
+        {
+            System.out.println("Erreur: Hote inconnu.");
         }
+
     }
 }

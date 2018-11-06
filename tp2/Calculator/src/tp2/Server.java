@@ -3,6 +3,7 @@ package tp2;
 import tp2.common.Calculator;
 import tp2.common.NameServiceInterface;
 
+import java.net.InetAddress;
 import java.rmi.AccessException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -60,7 +61,8 @@ public class Server {
 
             registry.rebind("Calculator", skeleton);
             NameServiceInterface nameServiceStub = loadNameService(_hostname);
-            nameServiceStub.register("127.0.0.1");
+            String hostname = InetAddress.getLocalHost().getHostAddress();
+            nameServiceStub.register(hostname);
             System.out.println("tp2.Server ready.\n* Maliciousness: " + maliciousness + "\n* Capacity: " + capacity);
 
 

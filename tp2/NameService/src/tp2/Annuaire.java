@@ -2,6 +2,7 @@ package tp2;
 
 import tp2.common.NameServiceInterface;
 
+import java.net.InetAddress;
 import java.rmi.ConnectException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -24,6 +25,8 @@ public class Annuaire  implements NameServiceInterface {
 
     private void run() {
         try {
+            String hostname = InetAddress.getLocalHost().getHostAddress();
+            System.out.println("Host address: " + hostname);
             NameServiceInterface stub = (NameServiceInterface) UnicastRemoteObject
                     .exportObject(this, 5010);
 

@@ -29,7 +29,6 @@ public class Server {
     private NameServiceInterface loadNameService(String hostname)
     {
         NameServiceInterface stub = null;
-
         try {
             Registry registry = LocateRegistry.getRegistry(hostname, 5010);
             stub = (NameServiceInterface) registry.lookup("nameService");

@@ -1,64 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Calculator:jar" />
+      <artifact name="Distributor:jar" />
+      <artifact name="NameService:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e2274213-e3de-4dba-b098-379e23a1b644" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Distributor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Distributor/src/tp2/Distributor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Distributor/src/tp2/utils/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Distributor/src/tp2/utils/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/tp2/utils/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/tp2/utils/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/tp2/utils/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/Calculator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/CalculatorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/OperationsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/CalculatorModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/NameServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/Distributor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/Distributor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/CalculatorModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/NameServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/Annuaire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/CalculatorModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/NameServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/tp2/CalculatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/tp2/CalculatorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/security.policy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Operation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/Distributor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/Distributor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-1481" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-1481" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-1949" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-1949" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-2809" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-2809" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-3216" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-3216" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-588" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-588" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/CalculatorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/CalculatorImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/OperationsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/OperationsImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/common/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/common/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/utils/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-1481" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-1481" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-1949" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-1949" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-2809" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-2809" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-3216" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-3216" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-588" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-588" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/OperationsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/tp2/OperationsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/tp2/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/NameService.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator/src/tp2/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/src/tp2/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/Distributor.class" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/Distributor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/CalculatorModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/CalculatorModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/NameServiceInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/NameServiceInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/Operation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/out/production/Distributor/tp2/common/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Distributor/src/tp2/Distributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/Distributor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NameService/NameService.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/NameService.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NameService/src/tp2/Annuaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/src/tp2/Annuaire.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,14 +69,56 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1333452317">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="MF" value="1" />
+          <entry key="iml" value="2" />
+          <entry key="java" value="7" />
+          <entry key="policy" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="IDEA_MODULE" value="2" />
+          <entry key="JAVA" value="7" />
+          <entry key="Manifest" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="IDEA_MODULE" value="27" />
+          <entry key="JAVA" value="21" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="iml" value="27" />
+          <entry key="java" value="21" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/Distributor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="143" selection-start-line="143" selection-end-line="143" />
+            <state relative-caret-position="683">
+              <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,32 +129,37 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Calculator/src/tp2/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+            <state relative-caret-position="375">
+              <caret line="45" column="52" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Calculator/src/tp2/CalculatorImpl.java">
+        <entry file="file://$PROJECT_DIR$/NameService/NameService.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="60">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/Calculator.java">
+        <entry file="file://$PROJECT_DIR$/Distributor/src/META-INF/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Distributor/Distributor.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+            <state relative-caret-position="60">
+              <caret line="4" column="19" selection-start-line="3" selection-start-column="3" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/CalculatorModel.java">
+        <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/CalculatorModel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -158,10 +168,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/NameServiceInterface.java">
+        <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="75">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -187,10 +197,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NameService/src/tp2/Annuaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+            <state relative-caret-position="915">
+              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1625#1626#0" expanded="true" />
+                <element signature="e#1652#1653#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -239,13 +251,15 @@
         <option value="$PROJECT_DIR$/NameService/src/tp2/common/CalculatorModel.java" />
         <option value="$PROJECT_DIR$/Distributor/src/tp2/common/CalculatorModel.java" />
         <option value="$PROJECT_DIR$/Server/src/tp2/common/CalculatorModel.java" />
-        <option value="$PROJECT_DIR$/NameService/src/tp2/Annuaire.java" />
         <option value="$PROJECT_DIR$/Distributor/src/tp2/common/Calculator.java" />
         <option value="$PROJECT_DIR$/Server/src/tp2/common/Calculator.java" />
         <option value="$PROJECT_DIR$/NameService/src/tp2/common/Calculator.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/Server/src/tp2/CalculatorImpl.java" />
         <option value="$PROJECT_DIR$/Server/src/tp2/Server.java" />
+        <option value="$PROJECT_DIR$/NameService/src/tp2/Annuaire.java" />
+        <option value="$PROJECT_DIR$/Calculator/src/tp2/Server.java" />
+        <option value="$PROJECT_DIR$/NameService/NameService.iml" />
         <option value="$PROJECT_DIR$/Distributor/src/tp2/Distributor.java" />
       </list>
     </option>
@@ -256,17 +270,19 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="644" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="2244" />
     <option name="y" value="36" />
-    <option name="width" value="636" />
-    <option name="height" value="764" />
+    <option name="width" value="956" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,84 +292,24 @@
             </path>
             <path>
               <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calculator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Calculator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tp2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Distributor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Distributor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Distributor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tp2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Distributor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tp2" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Distributor" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tp2" type="462c0819:PsiDirectoryNode" />
-              <item name="inputFiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NameService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NameService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NameService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tp2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NameService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tp2" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541518192579" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541523555802" />
     <property name="last.edited.regexp" value="Sample Text" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Distributor" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jars" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.1633987" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -375,7 +331,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Distributor (1)">
+  <component name="RunManager" selected="Application.Distributor">
     <configuration name="Annuaire" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="tp2.Annuaire" />
       <module name="NameService" />
@@ -452,7 +408,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Distributor (1)" />
+      <item itemvalue="Application.Distributor" />
+      <item itemvalue="Application.Server" />
       <item itemvalue="Application.Server " />
       <item itemvalue="Cucumber java.All Features in: Distributor" />
       <item itemvalue="Cucumber java.All Features in: Server" />
@@ -460,7 +417,7 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Distributor (1)" />
+        <item itemvalue="Application.Distributor" />
         <item itemvalue="Application.Server " />
         <item itemvalue="Application.Annuaire" />
         <item itemvalue="Cucumber java.All Features in: Server" />
@@ -484,17 +441,27 @@
       <workItem from="1541443920426" duration="16187000" />
       <workItem from="1541467066991" duration="11408000" />
       <workItem from="1541509784485" duration="8204000" />
+      <workItem from="1541519584860" duration="656000" />
+      <workItem from="1541520267628" duration="3449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6839000" />
+    <option name="totallyTimeSpent" value="10944000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="36" width="1280" height="764" extended-state="6" />
-    <editor active="true" />
+    <frame x="1280" y="36" width="1920" height="1044" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.23176661" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.18196371" />
       <window_info id="Structure" order="1" sideWeight="0.50117093" side_tool="true" weight="0.32881355" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -503,16 +470,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32755905" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30866143" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30819672" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.73543304" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32896176" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.7344262" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32755905" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32677597" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32913387" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32913387" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32896176" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497332" />
@@ -523,36 +490,6 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Database" order="8" weight="0.15640195" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.32820097" />
-      <window_info id="Structure" order="1" sideWeight="0.50117093" side_tool="true" weight="0.32881355" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32755905" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30903327" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.73543304" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32755905" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32913387" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32913387" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497332" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="right" id="Database" order="8" weight="0.15640195" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -561,9 +498,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NameService/NameService.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/Calculator.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -578,27 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/NameServiceInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/CalculatorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -630,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Distributor/Distributor.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/src/tp2/common/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -644,53 +550,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/CalculatorModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/Annuaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/NameServiceInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/Operation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="jrt:///usr/lib/jvm/java-1.11.0-openjdk-amd64!/java.rmi/java/rmi/registry/LocateRegistry.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -701,22 +562,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/src/tp2/CalculatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="330">
           <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/CalculatorModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/NameServiceInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/NameServiceInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/CalculatorModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/common/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/Operation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/common/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/security.policy">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameService/src/tp2/Annuaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1625#1626#0" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Calculator/src/tp2/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+        <state relative-caret-position="375">
+          <caret line="45" column="52" selection-start-line="45" selection-start-column="44" selection-end-line="45" selection-end-column="52" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Distributor/Distributor.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" selection-start-line="3" selection-start-column="3" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NameService/NameService.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Distributor/src/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/Distributor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
+        <state relative-caret-position="683">
+          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -729,10 +692,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>NameService:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.1633987" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -744,7 +709,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.1633987" />
               </list>
             </option>
           </splitter-proportions>
@@ -755,7 +720,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.1633987" />
               </list>
             </option>
           </splitter-proportions>
@@ -780,7 +745,18 @@
             <option name="proportions">
               <list>
                 <option value="0.1633987" />
-                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -791,7 +767,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.1633987" />
               </list>
             </option>
           </splitter-proportions>

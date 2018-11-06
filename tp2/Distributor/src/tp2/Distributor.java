@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URL;
 import java.rmi.AccessException;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -14,7 +15,7 @@ import java.rmi.registry.Registry;
 import java.util.*;
 
 public class Distributor {
-    private final String _filePath = "Distributor/src/tp2/inputFiles/";
+    private final URL _filePath = this.getClass().getResource("tp2/inputFiles/");
     private String _userInput = "";
     private Map<UUID, Operation> _operations = new HashMap<>();
     private ArrayList<Task> _taskList = new ArrayList<>();

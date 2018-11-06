@@ -51,7 +51,6 @@ public class Annuaire  implements NameServiceInterface {
 
     public boolean authenticate(String uid, String password)
     {
-        //TODO: Actually make a db and check
         return true;
     }
 
@@ -66,9 +65,4 @@ public class Annuaire  implements NameServiceInterface {
     {
         _registeredHosts.remove(hostname);
     }
-
-
-
-
-
 }

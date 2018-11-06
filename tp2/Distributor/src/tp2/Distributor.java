@@ -17,7 +17,6 @@ import java.rmi.registry.Registry;
 import java.util.*;
 
 public class Distributor {
-    private final URL _filePath = this.getClass().getResource("tp2/inputFiles/");
     private String _userInput = "";
     private Map<UUID, Operation> _operations = new HashMap<>();
     private ArrayList<Task> _taskList = new ArrayList<>();
@@ -75,7 +74,7 @@ public class Distributor {
 
     private void parseFile() {
         try {
-            File file = new File(_filePath + _userInput);
+            File file = new File(System.getProperty("user.dir") + "/inputFiles/" + _userInput);
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line;
             Task initialTask = new Task(new ArrayList<>());
@@ -182,6 +181,5 @@ public class Distributor {
         {
             System.out.println("Erreur: Hote inconnu.");
         }
-
     }
 }

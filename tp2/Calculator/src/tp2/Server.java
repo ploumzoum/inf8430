@@ -21,6 +21,7 @@ public class Server {
 
         if (args.length == 3) {
             server.run(Integer.parseInt(args[0]), Integer.parseInt(args[1]), args[2]);
+
         } else {
             server.run(0, 100, "127.0.0.1");
         }

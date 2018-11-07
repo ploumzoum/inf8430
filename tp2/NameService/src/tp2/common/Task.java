@@ -25,6 +25,18 @@ public class Task implements Serializable {
         return _operations.size();
     }
 
+    public ArrayList<Integer> compareTo(Task task) {
+        int index = 0;
+        ArrayList<Integer> badIndex = new ArrayList<>();
+        for (Operation operation: _operations) {
+            if (operation._result != task._operations.get(index)._result) {
+                badIndex.add(index);
+            }
+            index++;
+        }
+        return badIndex;
+    }
+
     public ArrayList<Operation> shrink(int fromIndex, int toIndex){
         ArrayList<Operation> chopped2 = new ArrayList<>(_operations.subList(fromIndex, toIndex));
         _operations = new ArrayList<>(_operations.subList(0, fromIndex));

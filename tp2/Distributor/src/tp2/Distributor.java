@@ -14,19 +14,35 @@ import java.rmi.registry.Registry;
 import java.util.*;
 
 public class Distributor {
-    private final String _filePath = "Distributor/src/tp2/inputFiles/";
     private String _userInput = "";
     private Map<UUID, Operation> _operations = new HashMap<>();
     private ArrayList<Task> _taskList = new ArrayList<>();
     private ArrayList<CalculatorModel> calculators = new ArrayList<>();
-    private String _hostname = "127.0.0.1";
+    private String _nameServiceHostname;
+    private Boolean _secureMode;
+
     public static void main(String[] args) {
-        Distributor distributor = new Distributor();
+        String nameServiceHostname;
+        Boolean secureMode;
+        if (args.length == 1) {
+            nameServiceHostname = args[0];
+            secureMode = true;
+        } else if (args.length == 2){
+            nameServiceHostname =  args[0];
+            secureMode = Boolean.parseBoolean(args[1]);
+        } else {
+            nameServiceHostname = "127.0.0.1";
+            secureMode = true;
+        }
+        Distributor distributor = new Distributor(nameServiceHostname, secureMode);
         distributor.run();
     }
 
-    public Distributor() {
+
+    public Distributor(String hostname, Boolean secureMode) {
         super();
+        _nameServiceHostname = hostname;
+        _secureMode = secureMode;
         loadCalculators();
     }
 
@@ -34,7 +50,12 @@ public class Distributor {
         int result;
         while(listenToInput()) {
             parseFile();
-            result = dispatchTasks();
+            if (_secureMode){
+                result = dispatchTasksSecure();
+
+            } else {
+                result = dispatchTasksUnsecure();
+            }
             System.out.println("Result: " + result);
             _taskList.clear();
         }
@@ -72,7 +93,7 @@ public class Distributor {
 
     private void parseFile() {
         try {
-            File file = new File(_filePath + _userInput);
+            File file = new File(System.getProperty("user.dir") + "/inputFiles/" + _userInput);
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line;
             Task initialTask = new Task(new ArrayList<>());
@@ -93,10 +114,96 @@ public class Distributor {
         }
     }
 
-    private int dispatchTasks() {
-        // implement server selection logic here
+    private void sortCalculators() {
+        int n = calculators.size();
+        CalculatorModel temp;
+        if (calculators.size() > 1) {
+            for(int i = 0; i < n; i++) {
+                for(int j = 1; j < (n-i); j++) {
+                    if(calculators.get(j-1).serverCapacity < calculators.get(j).serverCapacity) {
+                        temp = calculators.get(j-1);
+                        calculators.remove(j-1);
+                        calculators.add(j, temp);
+                    }
+                }
+            }
+        }
+    }
+
+    private int dispatchTasksUnsecure() {
+        long start = System.nanoTime();
+        ArrayList<Operation> faultyOperations = new ArrayList<>();
 
         while(_taskList.size() > 0) {
+            sortCalculators();
+            if(calculators.get(0).serverCapacity == 0) {
+                loadCalculators();
+                sortCalculators();
+            }
+            Calculator calculatorStub = calculators.get(0).serverStub;
+            try {
+                int optimalSize = getOptimalSize(calculatorStub);
+                Task task = _taskList.get(0);
+                if (task.size() > optimalSize) {
+                    Task choppedTask = new Task(task.shrink(optimalSize, task.size()));
+                    _taskList.add(choppedTask);
+                }
+                Task result1 = calculatorStub.executeTask(task);
+                Task result2 = calculators.get(1).serverStub.executeTask(task);
+                
+                ArrayList<Integer> badResults = result1.compareTo(result2);
+                for (int i: badResults) {
+
+                    faultyOperations.add(result1.getOperations().get(i));
+                }
+                Collections.reverse(badResults);
+                for (int i: badResults) {
+                    result1.getOperations().remove(i);
+                }
+                if (result1.size() > 0) {
+                    updateMainTask(result1);
+                }
+                _taskList.remove(0);
+                if(faultyOperations.size() >  0 ) {
+                    System.out.println("Detected "+faultyOperations.size()+" wrong result(s).");
+                    if(_taskList.size() > 0) {
+                        _taskList.get(0).getOperations().addAll(faultyOperations);
+                    } else {
+                        _taskList.add(new Task(faultyOperations));
+                    }
+                }
+            } catch (RemoteException e) {
+                System.err.println("Remote Exception Error:" + e.getMessage());
+                System.out.println("\nReloading calculators...\n");
+
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                }
+                loadCalculators();
+            }
+            faultyOperations.clear();
+            CalculatorModel temp = calculators.get(0);
+            calculators.remove(0);
+            calculators.add(temp);
+        }
+        loadCalculators();
+        long end = System.nanoTime();
+        System.out.println("Temps écoulé avec: " + calculators.size() + " calculateur(s): "+ (end - start)
+                + " ns");
+        return sumThemAll(extractResults());
+    }
+
+    private int dispatchTasksSecure() {
+        // implement server selection logic here
+        long start = System.nanoTime();
+        while(_taskList.size() > 0) {
+            sortCalculators();
+            if(calculators.get(0).serverCapacity == 0) {
+                loadCalculators();
+                sortCalculators();
+            }
             Calculator calculatorStub = calculators.get(0).serverStub;
             try {
                 int optimalSize = getOptimalSize(calculatorStub);
@@ -120,10 +227,14 @@ public class Distributor {
                 } catch (InterruptedException e1) {
                     e1.printStackTrace();
                 }
-            } finally {
                 loadCalculators();
             }
+            calculators.get(0).serverCapacity = 0;
         }
+        loadCalculators();
+        long end = System.nanoTime();
+        System.out.println("Temps écoulé avec: " + calculators.size() + " calculateur(s): "+ (end - start)
+                + " ns");
         return sumThemAll(extractResults());
     }
 
@@ -160,7 +271,8 @@ public class Distributor {
     private void loadCalculators()
     {
         try {
-            Registry registry = LocateRegistry.getRegistry(_hostname, 5010);
+            calculators.clear();
+            Registry registry = LocateRegistry.getRegistry(_nameServiceHostname, 5010);
             NameServiceInterface nameServiceStub = (NameServiceInterface) registry.lookup("nameService");
             List<String> availableHosts = nameServiceStub.fetchAllAvailable();
             for (String host : availableHosts) {

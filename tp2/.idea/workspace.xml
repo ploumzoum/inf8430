@@ -1,65 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2274213-e3de-4dba-b098-379e23a1b644" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Distributor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Distributor/src/tp2/Distributor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Distributor/src/tp2/utils/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Distributor/src/tp2/utils/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/tp2/utils/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/tp2/utils/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/tp2/utils/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/Calculator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/CalculatorImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/OperationsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/CalculatorModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/NameServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/Distributor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/Distributor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/CalculatorModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/NameServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Distributor/src/tp2/common/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/Annuaire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/CalculatorModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/NameServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NameService/src/tp2/common/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/tp2/CalculatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/tp2/CalculatorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Operation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/common/Operation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/Distributor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/Distributor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-1481" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-1481" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-1949" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-1949" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-2809" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-2809" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-3216" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-3216" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/distributor/inputFiles/operations-588" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/inputFiles/operations-588" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/CalculatorImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/CalculatorImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/OperationsImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/OperationsImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tp2/com/inf8480/server/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/common/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator/src/tp2/common/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/common/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Distributor/src/tp2/utils/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/inf8480/distributor/Distributor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-1481" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-1481" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-1949" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-1949" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-2809" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-2809" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-3216" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-3216" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/distributor/inputFiles/operations-588" beforeDir="false" afterPath="$PROJECT_DIR$/Distributor/src/tp2/inputFiles/operations-588" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/CalculatorImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/OperationsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/tp2/OperationsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/inf8480/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/tp2/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NameService/NameService.iml" afterDir="false" />
-    </list>
+    <list default="true" id="e2274213-e3de-4dba-b098-379e23a1b644" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +54,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/Distributor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="-243">
               <caret line="143" selection-start-line="143" selection-end-line="143" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -256,7 +198,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="644" />
     <option name="y" value="36" />
     <option name="width" value="636" />
@@ -347,7 +289,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541518192579" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541518268650" />
     <property name="last.edited.regexp" value="Sample Text" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Distributor" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -483,18 +425,17 @@
       <workItem from="1541440778461" duration="2329000" />
       <workItem from="1541443920426" duration="16187000" />
       <workItem from="1541467066991" duration="11408000" />
-      <workItem from="1541509784485" duration="8204000" />
+      <workItem from="1541509784485" duration="8510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6839000" />
+    <option name="totallyTimeSpent" value="7145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="36" width="1280" height="764" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.23176661" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49882904" visible="true" weight="0.22123177" />
       <window_info id="Structure" order="1" sideWeight="0.50117093" side_tool="true" weight="0.32881355" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -715,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Distributor/src/tp2/Distributor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="-243">
           <caret line="143" selection-start-line="143" selection-end-line="143" />
           <folding>
             <element signature="imports" expanded="true" />

@@ -1,0 +1,56 @@
+#
+# Partie 1 du tp3 pour deployer sur une seule machine virtuelle
+#
+heat_template_version: 2013-05-23
+
+description: >
+  Hello world HOT template that just defines a single server.
+  Contains just base features to verify base HOT support.
+
+parameters:
+  image:
+    type: string
+    description: Image utilisee pour les serveurs
+    default: INF4410-Ubuntu-trusty-mini
+    constraints:
+      - allowed_values: [ INF4410-Ubuntu-trusty-mini ]
+
+  flavor:
+    type: string
+    description: Flavor utilisee par les serveurs
+    default: INF4410-mini
+    constraints:
+      - allowed_values: [ INF4410-mini ]
+
+  network:
+    type: string
+    description: Reseau pour eviter l'ambiguite a la generation
+    default: inf4410-net
+
+  db_port:
+    type: number
+    description: Database port number
+    default: 8080
+
+resources:
+  server:
+    type: OS::Nova::Server
+    properties:
+      network: {get_param: network}
+      image: { get_param: image }
+      flavor: { get_param: flavor }
+      user_data_format: RAW
+      user_data:
+        str_replace:
+          template: |
+            #!/bin/bash
+            curl -o server.py https://raw.githubusercontent.com/houssemmh/INF8480-TP3/master/server.py
+            python server.py
+            # ...
+          params:
+            db_port: { get_param: db_port }
+
+outputs:
+  server_networks:
+    description: The networks of the deployed server
+    value: { get_attr: [server, networks] }

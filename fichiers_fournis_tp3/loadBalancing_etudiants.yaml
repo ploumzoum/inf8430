@@ -18,6 +18,11 @@ parameters:
     constraints:
       - allowed_values: [ INF4410-mini ]
 
+    network:
+      type: string
+      description: Reseau pour eviter l'ambiguite a la generation
+      default: inf4410-net
+
   subnet_id:
     type: string
     description: Sous-reseau dans lequel le load balancer sera situe
@@ -39,6 +44,7 @@ resources:
               # create a unique name for each server
               # using its index in the group
               name: my_server_%index%
+              network: {get_param: network}
               image: {get_param: image}
               flavor: {get_param: flavor}
               user_data: |

@@ -21,9 +21,9 @@ parameters:
   subnet_id:
     type: string
     description: Sous-reseau dans lequel le load balancer sera situe
-    default: inf4410-net
+    default: 0c3b1354-d3d5-4fec-86d3-19d4d1f13785 
     constraints:
-      - allowed_values: [ inf4410-net ]
+      - allowed_values: [ 0c3b1354-d3d5-4fec-86d3-19d4d1f13785 ]
 
     # Vous pouvez ajouter d'autres paramètres
     # Il faut bien définir les descriptions, les valeurs par default et les contraintes
@@ -32,21 +32,45 @@ resources:
   server_nodes:
       type: OS::Heat::ResourceGroup
       properties:
-      #A completer
+          count: 2
+          resource_def:
+            type: OS::Nova::Server
+            properties:
+              # create a unique name for each server
+              # using its index in the group
+              name: my_server_%index%
+              image: {get_param: image}
+              flavor: {get_param: flavor}
+              user_data: |
+                        #!/bin/bash
+                        curl -o server.py https://raw.githubusercontent.com/houssemmh/INF8480-TP3/master/server.py
+                        python server.py
+                        # ...
 
 
   mypool:
       type: OS::Neutron::Pool
-      #A completer
+      properties:
+          protocol: HTTP
+          monitors: [{get_resource: mymonitor}]
+          subnet_id: {get_param: subnet_id}
+          lb_method: ROUND_ROBIN
+          vip:
+            protocol_port: 8080
 
   myloadbalancer:
       type: OS::Neutron::LoadBalancer
-      #A completer
+      properties:
+          protocol_port: 8080
+          pool_id: {get_resource: mypool}
 
   mymonitor:
       type: OS::Neutron::HealthMonitor
       properties:
-      #A completer
+          type: HTTP
+          delay: 15
+          max_retries: 5
+          timeout: 5
 
 
 outputs:

@@ -1,11 +1,6 @@
-#
-# Partie 1 du tp3 pour deployer sur une seule machine virtuelle
-#
 heat_template_version: 2013-05-23
 
-description: >
-  Hello world HOT template that just defines a single server.
-  Contains just base features to verify base HOT support.
+description: TP3 partie 1 Deploiement du service web sur une seule machine virtuelle
 
 parameters:
   image:

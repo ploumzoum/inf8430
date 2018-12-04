@@ -1,6 +1,6 @@
-heat_template_version: 2014-10-16
+heat_template_version: 2013-05-23
 
-description: A template to deploy a load balanced web server
+description: TP3 partie 2 Deploiement du service web sur 2 machines virtuelles avec un load balancer
 
 parameters:
 
@@ -30,9 +30,9 @@ parameters:
     constraints:
       - allowed_values: [ 6579eb07-88c3-4707-9c6e-ab90a78cca02 ]
 
-  external_network_id:
+  ext-net_id:
     type: string
-    description: ID de l'addresse IP
+    description: ID du reseau ext-net
     default: 0c3b1354-d3d5-4fec-86d3-19d4d1f13785
 
     # Vous pouvez ajouter d'autres paramètres
@@ -44,12 +44,15 @@ resources:
       properties:
           count: 2
           resource_def:
-            type: OS::Nova::Server
+            type: https://gist.githubusercontent.com/ploumzoum/9ac5d83578ebbf84949594ea4a6be0c1/raw/bcd8b97f7b7050a1f10523a4a308b9436e410404/server.yaml
             properties:
               # create a unique name for each server
               # using its index in the group
               name: my_server_%index%
-              networks: [network: {get_param: network}]
+              image: {get_param: image}
+              flavor: {get_param: flavor}
+              network: {get_param: network}
+              pool_id: {get_resource: mypool}
               image: {get_param: image}
               flavor: {get_param: flavor}
               user_data: |
@@ -69,12 +72,7 @@ resources:
           lb_method: ROUND_ROBIN
           vip:
             protocol_port: 8080
-  member:
-    type: OS::Neutron::PoolMember
-    properties:
-      pool_id: {get_resource: mypool}
-      address: {get_attr: [server, first_address]}
-      protocol_port: 8080
+
   myloadbalancer:
       type: OS::Neutron::LoadBalancer
       properties:
@@ -90,13 +88,13 @@ resources:
           timeout: 5
 
 
-  lb_floating:
+  floatingIP:
     type: OS::Neutron::FloatingIP
     properties:
-      floating_network_id: {get_param: external_network_id}
+      floating_network_id: {get_param: ext-net_id}
       port_id: {get_attr: [mypool, vip, port_id]}
 
 outputs:
   ip_address:
-    value: {get_attr: [lb_floating, floating_ip_address]}
-    description: The IP address of the load balancing pool
+    value: {get_attr: [floatingIP, floating_ip_address]}
+    description: IP address to use

@@ -1,0 +1,98 @@
+heat_template_version: 2014-10-16
+
+description: A template to deploy a load balanced web server
+
+parameters:
+
+  image:
+    type: string
+    description: Image utilisee pour les serveurs
+    default: INF4410-Ubuntu-trusty-mini
+
+  flavor:
+    type: string
+    description: Flavor utilisee par les serveurs
+    default: INF4410-mini
+
+  network:
+    type: string
+    description: Reseau dans lequel se trouvent les composantes
+    default: inf4410-net
+
+  subnet_id:
+    type: string
+    description: Sous-reseau dans lequel le load balancer sera situe
+    default: 6579eb07-88c3-4707-9c6e-ab90a78cca02
+
+  key:
+    type: string
+    description: Nom de la paire de cle SSH
+    default: server
+
+  count:
+    type: number
+    description: Nombre d'instances
+    default: 5
+
+  external_network_id:
+    type: string
+    description: ID de l'addresse IP
+    default: 0c3b1354-d3d5-4fec-86d3-19d4d1f13785
+    # Vous pouvez ajouter d'autres paramètres
+    # Il faut bien définir les descriptions, les valeurs par default et les contraintes
+
+resources:
+  server_nodes:
+    type: OS::Heat::ResourceGroup
+    properties:
+      count: {get_param: count}
+      resource_def:
+        type: https://gist.githubusercontent.com/zer0x64/1fae5c895561819c0a29fb6ee3295b77/raw/cb58cacde58b67019d3d63f2dc0d89ac82e95d3e/lb_server.yaml #lb_server.yaml #OS::Nova::Server
+        properties:
+          flavor: {get_param: flavor}
+          image: {get_param: image}
+          key_name: {get_param: key}
+          network: {get_param: network}
+          pool_id: {get_resource: mypool}
+          metadata: {"metering.stack": {get_param: "OS::stack_id"}}
+          user_data: |
+            #!/bin/bash
+            cd /tmp
+            wget https://raw.githubusercontent.com/houssemmh/INF8480-TP3/master/server.py
+            python server.py
+            #...
+
+  mymonitor:
+    type: OS::Neutron::HealthMonitor
+    properties:
+      type: TCP
+      delay: 15
+      max_retries: 2
+      timeout: 5
+
+  mypool:
+    type: OS::Neutron::Pool
+    properties:
+      protocol: HTTP
+      monitors: [{get_resource: mymonitor}]
+      subnet_id: {get_param: subnet_id}
+      lb_method: ROUND_ROBIN
+      vip:
+        protocol_port: 8080
+
+  myloadbalancer:
+    type: OS::Neutron::LoadBalancer
+    properties:
+      protocol_port: 8080
+      pool_id: {get_resource: mypool}
+
+  lb_floating:
+    type: OS::Neutron::FloatingIP
+    properties:
+      floating_network_id: {get_param: external_network_id}
+      port_id: {get_attr: [mypool, vip, port_id]}
+
+outputs:
+  ip_address:
+    value: {get_attr: [lb_floating, floating_ip_address]}
+    description: The IP address of the load balancing pool

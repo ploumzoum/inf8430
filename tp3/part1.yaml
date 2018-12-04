@@ -24,7 +24,7 @@ parameters:
 
   network:
     type: string
-    description: Reseau pour eviter l'ambiguite a la generation
+    description: Reseau dans lequel se trouvent les composantes
     default: inf4410-net
 
   db_port:
@@ -36,9 +36,9 @@ resources:
   server:
     type: OS::Nova::Server
     properties:
-      network: {get_param: network}
-      image: { get_param: image }
-      flavor: { get_param: flavor }
+      flavor: {get_param: flavor}
+      image: {get_param: image}
+      networks: [network: {get_param: network}]
       user_data_format: RAW
       user_data:
         str_replace:
